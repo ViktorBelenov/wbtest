@@ -38,6 +38,18 @@
   &:focus-visible {
     outline: 0;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 

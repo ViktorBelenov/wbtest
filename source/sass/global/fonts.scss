@@ -4,5 +4,14 @@
   font-family: "Segoe UI";
 
   font-display: swap;
-  src: url("../fonts/segoe-ui/SegoeUi.woff2") format("woff2");
+  src: url("../fonts/segoe-ui/SegoeUI.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Segoe UI";
+
+  font-display: swap;
+  src: url("../fonts/segoe-ui/SegoeUI-Bold.woff2") format("woff2");
 }

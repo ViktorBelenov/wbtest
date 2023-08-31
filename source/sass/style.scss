@@ -3,13 +3,18 @@
 // ---------------------------------
 @import "global/fonts";
 @import "global/normalize";
+@import "global/utils";
 @import "variables";
 @import "mixins";
+
 
 // Blocks
 // ---------------------------------
 @import "blocks/search";
 @import "blocks/header";
+@import "blocks/basket";
+@import "blocks/product";
+@import "blocks/checkbox";
 
 
 

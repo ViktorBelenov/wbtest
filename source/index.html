@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <title>Товары и точка</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -51,11 +51,48 @@
       </div>
     </header>
     <main>
+      <h1 class="visually-hidden">Страница корзины магазина Товары и точка</h1>
+      <section class="basket">
+        <div class="basket__wrapper">
+          <section class="basket__product product">
+            <h2 class="product__title">Корзина</h2>
+            <div class="product__settings-container">
+              <label class="checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="" value="">
+                <span class="checkbox__control-mark"></span>
+                <span class="checkbox__description">Выбрать все</span>
+              </label>
+              <button class="product__show-button" type="button">
+              </button>
+            </div>
+          </section>
+          <section class="total">
+
+          </section>
+
+        </div>
+      </section>
 
     </main>
     <footer>
 
     </footer>
+    <template id="card">
+      <label class="checkbox">
+        <input class="checkbox__input visually-hidden" type="checkbox" name="" value="">
+        <span class="checkbox__control-mark"></span>
+      </label>
+      <img>
+      <div class="card__text-container">
+        <h3 class="card__title"></h3>
+        <div class="card__properties">
+        </div>
+        <span class="card__stock"></span>
+        <span class="card__manufacturer">
+          <a class="card__manufacturer-kink"></a>
+        </span>
+      </div>
+    </template>
 
     <script src="js/main.min.js"></script>
   </body>

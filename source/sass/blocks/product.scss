@@ -1,0 +1,43 @@
+.product__title {
+  font-family: $ff-segoe;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.28px;
+
+  margin: 0 0 28px 0;
+}
+
+.product__settings-container {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.product__show-button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("../img/svg/product-list-open.svg");
+  width: 20px;
+  height: 20px;
+
+  background-color: inherit;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

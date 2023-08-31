@@ -20,6 +20,18 @@
   margin: 0 16px 0 0;
   padding: 0;
   background-color: transparent;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .header__burger-img {
@@ -39,12 +51,36 @@
   @media (max-width:($vp-768 - 1px)) {
     display: block;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .header__logo {
   margin: 0 32px 0 0;
   display: flex;
   align-items: center;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .header__logo-img {
@@ -76,6 +112,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+    text-decoration: none;
+  }
 }
 
 .header__link-text {
