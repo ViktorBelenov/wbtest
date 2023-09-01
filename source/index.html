@@ -65,6 +65,8 @@
               <button class="product__show-button" type="button">
               </button>
             </div>
+            <div class="product__card-container">
+            </div>
           </section>
           <section class="total">
 
@@ -77,20 +79,38 @@
     <footer>
 
     </footer>
+
     <template id="card">
-      <label class="checkbox">
-        <input class="checkbox__input visually-hidden" type="checkbox" name="" value="">
-        <span class="checkbox__control-mark"></span>
-      </label>
-      <img>
-      <div class="card__text-container">
-        <h3 class="card__title"></h3>
-        <div class="card__properties">
+      <div class="card">
+        <label class="checkbox">
+          <input class="checkbox__input visually-hidden" type="checkbox" name="" value="">
+          <span class="checkbox__control-mark"></span>
+        </label>
+        <img class="card__img">
+        <div class="card__text-container">
+          <h3 class="card__title"></h3>
+          <div class="card__properties">
+          </div>
+          <span class="card__stock"></span>
+          <div class="card__manufacturer-container">
+            <span class="card__manufacturer">
+            </span>
+            <a class="card__manufacturer-link"></a>
+          </div>
         </div>
-        <span class="card__stock"></span>
-        <span class="card__manufacturer">
-          <a class="card__manufacturer-kink"></a>
-        </span>
+        <div class="card__amount-container">
+          <div class="counter">
+            <button class="counter__minus"></button>
+            <input class="card__amount-input">
+            <button class="counter__plus"></button>
+          </div>
+          <button class="card__favorite"></button>
+          <button class="card__delete"></button>
+        </div>
+        <div class="card__price-container">
+          <span class="card__actual-price"></span>
+          <span class="card__past-price"></span>
+        </div>
       </div>
     </template>
 
