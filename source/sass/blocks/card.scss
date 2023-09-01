@@ -70,3 +70,53 @@
 .card__text-container {
   margin-right: auto;
 }
+
+.card__amount-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__counter {
+  margin: 0 0 8px 0;
+}
+
+.card__amount-warning {
+  color: $color-red-orange;
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+
+  margin-bottom: 16px;
+}
+
+.card__button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.card__favorite {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.card__favorite:hover .card__favorite-img {
+  fill: $color-red-orange;
+}
+
+.card__delete {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.card__delete:hover .card__delete-img {
+  fill: $color-red-orange;
+}

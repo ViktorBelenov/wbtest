@@ -1,0 +1,3 @@
+const LOW_PRODUCT_AMOUNT = 5;
+
+export {LOW_PRODUCT_AMOUNT};

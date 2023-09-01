@@ -18,7 +18,7 @@ const CARD = {
   amount: 1,
   actualPrice: 522,
   oldPrice: 1051,
-  maxAmount: 2,
+  amountLeft: 2,
 };
 
 export {CARD};

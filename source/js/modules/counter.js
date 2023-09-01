@@ -24,9 +24,9 @@ const startsCounting = (event) => {
     minus.classList.remove('counter__button--disabled');
   }
 
-  if (value >= CARD.maxAmount) {
+  if (value >= CARD.amountLeft) {
+    value = CARD.amountLeft;
     add.classList.add('counter__button--disabled');
-    value = CARD.maxAmount;
   } else {
     add.classList.remove('counter__button--disabled');
   }
@@ -35,7 +35,7 @@ const startsCounting = (event) => {
   indicator.value = value;
 };
 
-const getCounter = (card) => {
+const addCounter = (card) => {
 
   const counter = card.querySelector('[data-counter]');
   counter.addEventListener('click', startsCounting);
@@ -46,4 +46,4 @@ const removeCounter = (card) => {
   counter.removeEventListener('click', startsCounting);
 };
 
-export {getCounter, removeCounter};
+export {addCounter, removeCounter};
