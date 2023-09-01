@@ -82,7 +82,7 @@
 
     <template id="card">
       <div class="card">
-        <label class="checkbox">
+        <label class="card__checkbox checkbox">
           <input class="checkbox__input visually-hidden" type="checkbox" name="" value="">
           <span class="checkbox__control-mark"></span>
         </label>
@@ -95,15 +95,24 @@
           <div class="card__manufacturer-container">
             <span class="card__manufacturer">
             </span>
-            <a class="card__manufacturer-link"></a>
+            <a class="card__manufacturer-link">
+              <svg  width="20" height="20">
+                <use xlink:href="img/sprite.svg#info"></use>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="card__amount-container">
-          <div class="counter">
-            <button class="counter__minus"></button>
-            <input class="card__amount-input">
-            <button class="counter__plus"></button>
+          <div class="counter" data-counter>
+            <button class="counter__button counter__button--minus" type="button">
+              -
+            </button>
+            <input class="counter__input" type="text" disabled>
+            <button class="counter__button counter__button--plus" type="button">
+              +
+            </button>
           </div>
+          <span class="card__amount-warning"></span>
           <button class="card__favorite"></button>
           <button class="card__delete"></button>
         </div>

@@ -255,7 +255,7 @@ body {
 .basket__wrapper {
   padding: 22px 24px;
   border-radius: 24px;
-  background-color: #ffffff;
+  background-color: #f6f6fa;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 1fr;
@@ -341,4 +341,136 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 0 20px 0;
+}
+
+.card__checkbox {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card__img {
+  margin: 0 16px 0 0;
+}
+
+.card__title {
+  margin: 0 0 8px 0;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+}
+
+.card__properties {
+  margin: 0 0 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.card__property {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000000;
+}
+
+.card__stock {
+  color: #a0a0a4;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0 0 4px 0;
+}
+
+.card__manufacturer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.card__manufacturer-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__manufacturer {
+  color: #a0a0a4;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.card__text-container {
+  margin-right: auto;
+}
+
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  width: 100px;
+  height: 44px;
+  border-radius: 8px;
+}
+
+.counter__button {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.2px;
+  border: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0 8px;
+}
+.counter__button--disabled {
+  color: #cccccc;
+}
+
+.counter__input {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 0;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+.counter__input:disabled {
+  background-color: #ffffff;
 }

@@ -12,11 +12,13 @@ const CARDS = [];
 const CARD = {
   id: 1,
   title: 'Футболка UZcotton мужская',
+  properties: ['Цвет: белый', 'Размер: 56'],
   stock: 'Коледино WB',
   manufacturer: 'OOO Вайлдберриз',
   amount: 1,
   actualPrice: 522,
   oldPrice: 1051,
+  maxAmount: 2,
 };
 
 export {CARD};
