@@ -147,6 +147,11 @@
   font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.2px;
+
+  &--smaller-letter {
+    letter-spacing: 0;
+    font-size: 16px;
+  }
 }
 
 .card__past-price {

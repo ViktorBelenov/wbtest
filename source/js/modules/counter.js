@@ -1,4 +1,5 @@
-import {CARD} from './mock.js';
+import {CARDS} from './mock.js';
+import {updatePrice} from './price-update.js';
 
 
 const startsCounting = (event) => {
@@ -37,6 +38,7 @@ const startsCounting = (event) => {
   indicator.value = value;
   priceIndicatorContainer.querySelector('.card__actual-price').textContent = `${value * CARD.actualPrice} сом`;
   priceIndicatorContainer.querySelector('.card__past-price').textContent = `${value * CARD.oldPrice} сом`;
+  updatePrice();
 };
 
 const addCounter = (card) => {

@@ -1,6 +1,7 @@
-import {CARD, CARDS} from './mock.js';
+import {CARDS} from './mock.js';
 import {LOW_PRODUCT_AMOUNT} from './objects.js';
 
+import {updatePrice} from './price-update.js';
 import {addCounter, removeCounter} from './counter.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
@@ -37,8 +38,7 @@ const getCard = (element) => {
   cardElement.querySelector('.card__manufacturer').textContent = element.manufacturer;
   cardElement.querySelector('.counter__input').value = element.amount;
   getWarningAboutAmount(cardElement, element.amountLeft);
-  cardElement.querySelector('.card__actual-price').textContent = `${element.amount * element.actualPrice} сом`;
-  cardElement.querySelector('.card__past-price').textContent = `${element.amount * element.oldPrice} сом`;
+  updatePrice(cardElement, element);
   return cardElement;
 };
 

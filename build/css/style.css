@@ -530,6 +530,10 @@ body {
   line-height: 28px;
   letter-spacing: -0.2px;
 }
+.card__actual-price--smaller-letter {
+  letter-spacing: 0;
+  font-size: 16px;
+}
 
 .card__past-price {
   position: relative;
