@@ -37,8 +37,8 @@ const getCard = (element) => {
   cardElement.querySelector('.card__manufacturer').textContent = element.manufacturer;
   cardElement.querySelector('.counter__input').value = element.amount;
   getWarningAboutAmount(cardElement, element.amountLeft);
-  cardElement.querySelector('.card__actual-price').textContent = element.amount * element.actualPrice;
-  cardElement.querySelector('.card__past-price').textContent = element.amount * element.oldPrice;
+  cardElement.querySelector('.card__actual-price').textContent = `${element.amount * element.actualPrice} сом`;
+  cardElement.querySelector('.card__past-price').textContent = `${element.amount * element.oldPrice} сом`;
   return cardElement;
 };
 
