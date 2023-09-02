@@ -6,6 +6,10 @@ import {addCounter, removeCounter} from './counter.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 
+const setCardDataId = (card, data) => {
+  card.dataset.id = data.id;
+};
+
 const getWarningAboutAmount = (card, amount) => {
   if (amount <= LOW_PRODUCT_AMOUNT) {
     card.querySelector('.card__amount-warning').textContent = `Осталось ${amount} шт.`;
@@ -31,6 +35,7 @@ const getCardProperties = (card, properties) => {
 
 const getCard = (element) => {
   const cardElement = cardTemplate.cloneNode('true');
+  setCardDataId(cardElement, element);
   cardElement.querySelector('.card__img').src = `img/cards/${element.id}-product.jpg`;
   cardElement.querySelector('.card__title').textContent = element.title;
   cardElement.querySelector('.card__stock').textContent = element.stock;

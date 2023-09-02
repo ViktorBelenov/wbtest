@@ -1,6 +1,10 @@
 import {CARDS} from './mock.js';
 import {updatePrice} from './price-update.js';
 
+const searchCard = (element, cards) => {
+  const id = element.closest('.card').dataset.id;
+  return cards.find((card) => card.id === +id);
+};
 
 const startsCounting = (event) => {
   const target = event.target;
@@ -9,6 +13,7 @@ const startsCounting = (event) => {
   const minus = target.closest('.counter').querySelector('.counter__button--minus');
 
   const priceIndicatorContainer = target.closest('.card').querySelector('.card__price-container');
+  const currentCardData = searchCard(target, CARDS);
 
 
   let value = indicator.value;
@@ -27,18 +32,16 @@ const startsCounting = (event) => {
     minus.classList.remove('counter__button--disabled');
   }
 
-  if (value >= CARD.amountLeft) {
-    value = CARD.amountLeft;
+  if (value >= currentCardData.amountLeft) {
+    value = currentCardData.amountLeft;
     add.classList.add('counter__button--disabled');
   } else {
     add.classList.remove('counter__button--disabled');
   }
 
-  CARD.amount = value;
+  currentCardData.amount = value;
   indicator.value = value;
-  priceIndicatorContainer.querySelector('.card__actual-price').textContent = `${value * CARD.actualPrice} сом`;
-  priceIndicatorContainer.querySelector('.card__past-price').textContent = `${value * CARD.oldPrice} сом`;
-  updatePrice();
+  updatePrice(priceIndicatorContainer, currentCardData);
 };
 
 const addCounter = (card) => {
