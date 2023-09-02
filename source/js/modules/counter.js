@@ -1,10 +1,7 @@
 import {CARDS} from './mock.js';
 import {updatePrice} from './price-update.js';
+import {searchCard} from './search-card.js';
 
-const searchCard = (element, cards) => {
-  const id = element.closest('.card').dataset.id;
-  return cards.find((card) => card.id === +id);
-};
 
 const startsCounting = (event) => {
   const target = event.target;
