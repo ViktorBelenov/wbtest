@@ -1,3 +1,4 @@
 import {} from './modules/card.js';
-import {} from './modules/product-show.js';
+import {addShowbuttonListener} from './modules/product-show.js';
 
+addShowbuttonListener();

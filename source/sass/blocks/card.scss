@@ -25,7 +25,6 @@
 }
 
 .card__properties {
-  margin: 0 0 8px 0;
   display: flex;
   gap: 16px;
 }
@@ -37,6 +36,7 @@
   font-weight: 400;
   line-height: 16px;
   color: $color-default-black;
+  margin: 0 0 8px 0;
 }
 
 .card__stock {

@@ -7,6 +7,8 @@ const startsCounting = (event) => {
   const add = target.closest('.counter').querySelector('.counter__button--plus');
   const minus = target.closest('.counter').querySelector('.counter__button--minus');
 
+  const priceIndicatorContainer = target.closest('.card').querySelector('.card__price-container');
+
 
   let value = indicator.value;
 
@@ -33,6 +35,8 @@ const startsCounting = (event) => {
 
   CARD.amount = value;
   indicator.value = value;
+  priceIndicatorContainer.querySelector('.card__actual-price').textContent = `${value * CARD.actualPrice} сом`;
+  priceIndicatorContainer.querySelector('.card__past-price').textContent = `${value * CARD.oldPrice} сом`;
 };
 
 const addCounter = (card) => {

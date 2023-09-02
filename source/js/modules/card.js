@@ -1,4 +1,4 @@
-import {CARD} from './mock.js';
+import {CARD, CARDS} from './mock.js';
 import {LOW_PRODUCT_AMOUNT} from './objects.js';
 
 import {addCounter, removeCounter} from './counter.js';
@@ -42,14 +42,15 @@ const getCard = (element) => {
   return cardElement;
 };
 
-const renderCard = (card, place) => {
-  const newCard = getCard(card);
-  addCounter(newCard);
-  getDeleteCard(newCard);
-  place.append(newCard);
-
+const renderCards = (cards, place) => {
+  cards.forEach((card)=>{
+    const newCard = getCard(card);
+    addCounter(newCard);
+    getDeleteCard(newCard);
+    place.append(newCard);
+  });
 };
 
-renderCard(CARD, document.querySelector('.product__card-container'));
+renderCards(CARDS, document.querySelector('.product__card-container'));
 
-export {renderCard};
+export {renderCards};
