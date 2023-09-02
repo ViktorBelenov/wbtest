@@ -1,3 +1,5 @@
 const LOW_PRODUCT_AMOUNT = 5;
 
-export {LOW_PRODUCT_AMOUNT};
+const basket = document.querySelector('.basket');
+
+export {LOW_PRODUCT_AMOUNT, basket};

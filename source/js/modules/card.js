@@ -11,7 +11,12 @@ const getWarningAboutAmount = (card, amount) => {
   }
 };
 
-const getDeleteCard = () => {};
+const getDeleteCard = (card) => {
+  card.querySelector('.card__delete').addEventListener('click', (evt) => {
+    removeCounter(card);
+    evt.target.closest('.card').remove();
+  }, true);
+};
 
 const getCardProperties = (card, properties) => {
   const propertisContainer = card.querySelector('.card__properties');
@@ -40,6 +45,7 @@ const getCard = (element) => {
 const renderCard = (card, place) => {
   const newCard = getCard(card);
   addCounter(newCard);
+  getDeleteCard(newCard);
   place.append(newCard);
 
 };
