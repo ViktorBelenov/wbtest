@@ -3,6 +3,7 @@ import {LOW_PRODUCT_AMOUNT} from './objects.js';
 
 import {updatePrice} from './price-update.js';
 import {addCounter, removeCounter} from './counter.js';
+import {setSelectedCardListiner} from './total.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 
@@ -53,6 +54,7 @@ const renderCards = (cards, place) => {
     const newCard = getCard(card);
     addCounter(newCard);
     getDeleteCard(newCard);
+    setSelectedCardListiner(newCard);
     fragment.append(newCard);
   });
   place.append(fragment);
