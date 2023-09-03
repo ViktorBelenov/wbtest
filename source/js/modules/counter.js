@@ -1,6 +1,7 @@
 import {CARDS} from './mock.js';
 import {updatePrice} from './price-update.js';
 import {searchCard} from './search-card.js';
+import {updateTotalPrice} from './total.js';
 
 
 const startsCounting = (event) => {
@@ -9,32 +10,42 @@ const startsCounting = (event) => {
   const add = target.closest('.counter').querySelector('.counter__button--plus');
   const minus = target.closest('.counter').querySelector('.counter__button--minus');
 
+  const card = target.closest('.card');
+
   const priceIndicatorContainer = target.closest('.card').querySelector('.card__price-container');
   const currentCardData = searchCard(target, CARDS);
 
 
   let value = indicator.value;
+  let isAddition = true;
 
   if (target.closest('.counter__button--plus')) {
     value++;
   }
   if (target.closest('.counter__button--minus')) {
     value--;
+    isAddition = false;
   }
 
-  if (value <= 0) {
+  if (value > 0 && value <= currentCardData.amountLeft) {
+    updateTotalPrice(card, isAddition);
+  }
+
+  if (value < 0) {
     value = 0;
     minus.classList.add('counter__button--disabled');
   } else {
     minus.classList.remove('counter__button--disabled');
   }
 
-  if (value >= currentCardData.amountLeft) {
+  if (value > currentCardData.amountLeft) {
     value = currentCardData.amountLeft;
     add.classList.add('counter__button--disabled');
   } else {
     add.classList.remove('counter__button--disabled');
   }
+
+
 
   currentCardData.amount = value;
   indicator.value = value;

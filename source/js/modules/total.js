@@ -13,6 +13,9 @@ const updateTotalPrice = (card, isAddition) => {
     totalField.textContent = +totalField.textContent - CARDS[id].actualPrice * CARDS[id].amount;
     discountField.textContent = +discountField.textContent - CARDS[id].oldPrice * CARDS[id].amount;
   }
+  console.log(CARDS[id].actualPrice * CARDS[id].amount);
+  console.log('card');
+
 
 };
 
@@ -28,4 +31,4 @@ const setSelectedCardListiner = (card) => {
   });
 };
 
-export {setSelectedCardListiner};
+export {setSelectedCardListiner, updateTotalPrice};
