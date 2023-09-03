@@ -69,7 +69,33 @@
             </div>
           </section>
           <section class="total">
-
+            <h2 class="visually-hidden">Итоговая корзина</h2>
+            <section class="total__price-container">
+              <h3 class="tolal__title"></h3>
+              <span class="total__amount"></span>
+              <span class="total__discount"></span>
+            </section>
+            <section class="total__delivery delivery">
+              <div class="delivery__address-container">
+                <h3 class="delivery__address-type"></h3>
+                <button class="delivery__address-setting-button"></button>
+              </div>
+              <span class="delivery__address"></span>
+              <span class="delivery__date"></span>
+              <div class="delivery__refund"></div>
+            </section>
+            <section class="total__payment payment">
+              <div class="payment__container">
+                <h3 class="payment__type"></h3>
+                <button class="payment__type-setting-button"></button>
+              </div>
+              <div class="payment__card">
+              </div>
+              <div class="payment__moment">
+              </div>
+            </section>
+            <button class="total__buy"></button>
+            <div class="cutom-checbox-oferta"></div>
           </section>
 
         </div>
@@ -134,6 +160,7 @@
         </div>
       </div>
     </template>
+
 
     <script src="js/main.min.js"></script>
   </body>

@@ -48,12 +48,14 @@ const getCard = (element) => {
 };
 
 const renderCards = (cards, place) => {
+  const fragment = document.createDocumentFragment();
   cards.forEach((card)=>{
     const newCard = getCard(card);
     addCounter(newCard);
     getDeleteCard(newCard);
-    place.append(newCard);
+    fragment.append(newCard);
   });
+  place.append(fragment);
 };
 
 renderCards(CARDS, document.querySelector('.product__card-container'));
