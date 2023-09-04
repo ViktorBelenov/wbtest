@@ -10,25 +10,19 @@ const startsCounting = (event) => {
   const add = target.closest('.counter').querySelector('.counter__button--plus');
   const minus = target.closest('.counter').querySelector('.counter__button--minus');
 
-  const card = target.closest('.card');
 
   const priceIndicatorContainer = target.closest('.card').querySelector('.card__price-container');
   const currentCardData = searchCard(target, CARDS);
 
 
   let value = indicator.value;
-  let isAddition = true;
 
   if (target.closest('.counter__button--plus')) {
     value++;
   }
   if (target.closest('.counter__button--minus')) {
     value--;
-    isAddition = false;
-  }
 
-  if (value > 0 && value <= currentCardData.amountLeft) {
-    updateTotalPrice(card, isAddition);
   }
 
   if (value < 0) {
@@ -45,11 +39,10 @@ const startsCounting = (event) => {
     add.classList.remove('counter__button--disabled');
   }
 
-
-
   currentCardData.amount = value;
   indicator.value = value;
   updatePrice(priceIndicatorContainer, currentCardData);
+  updateTotalPrice();
 };
 
 const addCounter = (card) => {

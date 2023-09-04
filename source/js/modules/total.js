@@ -1,33 +1,42 @@
-import {total} from './objects';
 import {CARDS} from './mock';
 
-const updateTotalPrice = (card, isAddition) => {
-  const totalField = total.querySelector('.total__amount');
-  const discountField = total.querySelector('.total__discount');
-  const id = card.dataset.id - 1;
-
-  if (isAddition) {
-    totalField.textContent = +totalField.textContent + CARDS[id].actualPrice * CARDS[id].amount;
-    discountField.textContent = +discountField.textContent + CARDS[id].oldPrice * CARDS[id].amount;
-  } else {
-    totalField.textContent = +totalField.textContent - CARDS[id].actualPrice * CARDS[id].amount;
-    discountField.textContent = +discountField.textContent - CARDS[id].oldPrice * CARDS[id].amount;
+const prettierPrice = (total) => {
+  const totalArray = total.toString().split('');
+  for (let i = totalArray.length; i > 0; i--) {
+    if (i % 3 === 0) {
+      totalArray.splice(totalArray.length - i, 0, ' ');
+    }
   }
-  console.log(CARDS[id].actualPrice * CARDS[id].amount);
-  console.log('card');
+  return totalArray.join('');
+};
 
+const updateTotalPrice = () => {
 
+  const totalField = document.querySelector('.total__amount');
+
+  const discountField = document.querySelector('.total__discount');
+  const cards = document.querySelectorAll('.card');
+
+  let total = 0;
+  let oldPrice = 0;
+
+  cards.forEach((element) => {
+    let id = element.dataset.id;
+    if (element.querySelector('.checkbox__input').checked) {
+      total = total + CARDS[id - 1].amount * CARDS[id - 1].actualPrice;
+      oldPrice = oldPrice + CARDS[id - 1].amount * CARDS[id - 1].oldPrice;
+    }
+  });
+  prettierPrice(total);
+  prettierPrice(oldPrice);
+  totalField.textContent = prettierPrice(Math.ceil(total));
+  discountField.textContent = prettierPrice(Math.ceil(oldPrice));
 };
 
 const setSelectedCardListiner = (card) => {
   const checkbox = card.querySelector('.checkbox__input');
-  checkbox.addEventListener('change', (event)=>{
-    const product = event.target.closest('.card');
-    if (event.target.checked) {
-      updateTotalPrice(product, true);
-    } else {
-      updateTotalPrice(product, false);
-    }
+  checkbox.addEventListener('change', ()=>{
+    updateTotalPrice();
   });
 };
 
