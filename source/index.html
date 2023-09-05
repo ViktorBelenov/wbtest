@@ -76,7 +76,7 @@
                 <span class="total__price">0</span>
               </div>
               <div class="total__price-inner-container">
-                <span class="total__amount-product"></span>
+                <span class="total__amount-product">0 товаров</span>
                 <span class="total__without-discount">0</span>
               </div>
               <div class="total__price-inner-container">
@@ -90,11 +90,15 @@
             </section>
             <section class="total__delivery delivery">
               <div class="delivery__address-container">
-                <h3 class="delivery__address-type"></h3>
-                <button class="delivery__address-setting-button"></button>
+                <h3 class="delivery__address-type">Доставка в пункт выдачи</h3>
+                <button class="delivery__address-setting-button">
+                  <svg  width="16" height="16">
+                    <use xlink:href="img/sprite.svg#pen"></use>
+                  </svg>
+                </button>
               </div>
-              <span class="delivery__address"></span>
-              <span class="delivery__date"></span>
+              <span class="delivery__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+              <span class="delivery__date">5–8 фев</span>
               <div class="delivery__refund"></div>
             </section>
             <section class="total__payment payment">
@@ -134,7 +138,7 @@
           <div class="card__manufacturer-container">
             <span class="card__manufacturer">
             </span>
-            <a class="card__manufacturer-link">
+            <a class="card__manufacturer-link" href="#">
               <svg  width="20" height="20">
                 <use xlink:href="img/sprite.svg#info"></use>
               </svg>
@@ -172,6 +176,14 @@
           <span class="card__past-price"></span>
         </div>
       </div>
+    </template>
+
+    <template id="maker">
+      <section class="maker card__manufacturer-content">
+        <h3 class="maker__name"></h3>
+        <span class="maker__id"></span>
+        <span class="maker__address"></span>
+      </section>
     </template>
 
 

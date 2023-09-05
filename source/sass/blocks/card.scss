@@ -57,8 +57,14 @@
 }
 
 .card__manufacturer-link {
+  position: relative;
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+.card__manufacturer-link:hover .card__manufacturer-content {
+  display: flex;
 }
 
 .card__manufacturer {

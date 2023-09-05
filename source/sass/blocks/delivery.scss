@@ -1,0 +1,22 @@
+.delivery__address-type {
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  margin: 0;
+}
+
+.delivery__address-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delivery__address-setting-button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+}

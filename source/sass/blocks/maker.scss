@@ -1,0 +1,43 @@
+.maker {
+  position: absolute;
+  top: 0;
+  right: -140px;
+  display: none;
+  width: 280px;
+  padding: 11px 16px;
+  border-radius: 5px;
+
+  color: $color-default-black;
+  background-color: $color-default-white;
+
+  // display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.maker__name {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  margin: 0;
+}
+
+.maker__id {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+
+}
+
+.maker__address {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+
+}

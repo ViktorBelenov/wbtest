@@ -1,16 +1,35 @@
 import {CARDS} from './mock';
+import {MIN_FREE_ORDER_TOTAL_PRICE} from './objects';
+
 
 const prettierPrice = (total) => {
-  const totalArray = total.toString().split('');
+  const totalArray = Math.ceil(total).toString().split('');
   for (let i = totalArray.length; i > 0; i--) {
     if (i % 3 === 0) {
       totalArray.splice(totalArray.length - i, 0, ' ');
     }
   }
-  return totalArray.join('');
+  return totalArray.join('').trim();
 };
 
+const isDeliveryFree = (total) => {
+  return total > MIN_FREE_ORDER_TOTAL_PRICE ? 'Бесплатно' : prettierPrice(total);
+};
 
+const prettierAmount = (amount) => {
+  let add;
+  switch (amount) {
+    case 0:
+      add = 'товаров';
+      break;
+    case 1:
+      add = 'товар';
+      break;
+    default:
+      add = 'товара';
+  }
+  return amount + ' ' + add;
+};
 
 const updateTotalPrice = () => {
 
@@ -18,6 +37,8 @@ const updateTotalPrice = () => {
   const totalField = document.querySelector('.total__price');
   const discountField = document.querySelector('.total__without-discount');
   const cards = document.querySelectorAll('.card');
+  const profitField = document.querySelector('.total__discount');
+  const deliveryField = document.querySelector('.total__delivery-price');
 
   let total = 0;
   let oldPrice = 0;
@@ -32,9 +53,11 @@ const updateTotalPrice = () => {
     }
   });
 
-  totalAmountField.textContent = amount;
-  totalField.textContent = prettierPrice(Math.ceil(total));
-  discountField.textContent = prettierPrice(Math.ceil(oldPrice));
+  profitField.textContent = '-' + prettierPrice(oldPrice - total);
+  totalAmountField.textContent = prettierAmount(amount);
+  totalField.textContent = prettierPrice(total);
+  discountField.textContent = prettierPrice(oldPrice);
+  deliveryField.textContent = isDeliveryFree(total);
 };
 
 const setSelectedCardListiner = (card) => {

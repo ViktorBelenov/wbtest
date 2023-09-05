@@ -4,9 +4,21 @@ import {LOW_PRODUCT_AMOUNT} from './objects.js';
 
 import {updatePrice} from './price-update.js';
 import {addCounter, removeCounter} from './counter.js';
-import {setSelectedCardListiner} from './total.js';
+import {setSelectedCardListiner, updateTotalPrice} from './total.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
+const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');
+
+const getMakerCard = (card, data) => {
+  const makerCard = makerCardTemplate.cloneNode('true');
+  const makerPlace = card.querySelector('.card__manufacturer-link');
+
+  makerCard.querySelector('.maker__name').textContent = data.manufacturer.name;
+  makerCard.querySelector('.maker__id').textContent = data.manufacturer.id;
+  makerCard.querySelector('.maker__address').textContent = data.manufacturer.address;
+
+  makerPlace.append(makerCard);
+};
 
 const setCardDataId = (card, data) => {
   card.dataset.id = data.id;
@@ -22,6 +34,7 @@ const getDeleteCard = (card) => {
   card.querySelector('.card__delete').addEventListener('click', (evt) => {
     removeCounter(card);
     evt.target.closest('.card').remove();
+    updateTotalPrice();
   }, true);
 };
 
@@ -42,7 +55,7 @@ const getCard = (element) => {
   cardElement.querySelector('.card__title').textContent = element.title;
   cardElement.querySelector('.card__stock').textContent = element.stock;
   getCardProperties(cardElement, element.properties);
-  cardElement.querySelector('.card__manufacturer').textContent = element.manufacturer;
+  cardElement.querySelector('.card__manufacturer').textContent = element.manufacturer.name;
   cardElement.querySelector('.counter__input').value = element.amount;
   getWarningAboutAmount(cardElement, element.amountLeft);
   updatePrice(cardElement, element);
@@ -55,6 +68,7 @@ const renderCards = (cards, place) => {
     const newCard = getCard(card);
     addCounter(newCard);
     getDeleteCard(newCard);
+    getMakerCard(newCard, card);
     fragment.append(newCard);
     setSelectedCardListiner(newCard);
   });
