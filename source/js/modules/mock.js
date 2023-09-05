@@ -59,6 +59,13 @@ const CARDS = [{
 // price-per-unit
 // old-price-per-unit
 
+const PROFILE = {
+  isPickup: true,
+  addressPickup: [],
+  address: [],
+  cards: [],
+};
+
 const CARD = {
   id: 1,
   title: 'Футболка UZcotton мужская',
@@ -71,4 +78,4 @@ const CARD = {
   amountLeft: 2,
 };
 
-export {CARD, CARDS};
+export {CARD, PROFILE, CARDS};

@@ -186,6 +186,57 @@
       </section>
     </template>
 
+    <template id="address">
+      <div class="address">
+        <label class="checkbox-modal">
+          <input class="checkbox-modal__input visually-hidden" type="checkbox" name="" value="">
+          <span class="checkbox-modal__control-mark"></span>
+          <span class="checkbox-modal__description"></span>
+        </label>
+        <button></button>
+      </div>
+
+    </template>
+
+    <div class="modal">
+      <div class="modal__window modal__delivery" data-modal="delivery">
+        <div class="modal__title-container">
+          <h3 class="modal__title">Способ доставки</h3>
+          <button class="modal__close-button">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal__delivery-setting-container">
+          <label class="modal__delivery-setting">
+            <input class="visually-hidden modal__delivery-setting-input" type="radio" name="fat-list" value="10" checked="">
+            <span class="modal__delivery-setting-control-mark">В пункт выдачи</span>
+          </label>
+          <label class="modal__delivery-setting">
+            <input class="visually-hidden modal__delivery-setting-input" type="radio" name="fat-list" value="11">
+            <span class="modal__delivery-setting-control-mark">Курьером</span>
+          </label>
+        </div>
+        <div>
+          <h2>Мои адреса</h2>
+        </div>
+
+      </div>
+      <div class="modal__window modal__payment" data-modal="payment">
+        <div>
+          <h3 class="modal__title"></h3>
+          <button class="modal__close-button">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
 
     <script src="js/main.min.js"></script>
   </body>
