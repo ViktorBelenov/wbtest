@@ -1,0 +1,36 @@
+.total {
+  padding: 16px 24px 24px 24px;
+  background-color: $color-default-white;
+  border-radius: 16px;
+
+}
+
+.total__price-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.tolal__title {
+  font-family: $ff-segoe;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+}
+
+.total__price {
+  font-family: $ff-segoe;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+}
