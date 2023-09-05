@@ -1,0 +1,24 @@
+.delivery-radio__control-mark {
+  border-radius: 20px;
+  border: 2px solid rgba(203, 17, 171, 0.15);
+  padding: 9px 0 11px 0;
+
+  flex-grow: 1;
+
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+
+  text-align: center;
+}
+
+.delivery-radio {
+  display: flex;
+  flex-grow: 1;
+}
+
+.delivery-radio__input:checked + .delivery-radio__control-mark {
+  border: 2px solid $color-deep-magenta;
+}

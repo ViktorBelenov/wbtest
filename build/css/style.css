@@ -790,3 +790,38 @@ body {
   border: 0;
   background-color: transparent;
 }
+
+.modal__delivery-setting-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.delivery-radio__control-mark {
+  border-radius: 20px;
+  border: 2px solid rgba(203, 17, 171, 0.15);
+  padding: 9px 0 11px 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.delivery-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.delivery-radio__input:checked + .delivery-radio__control-mark {
+  border: 2px solid #cb11ab;
+}
