@@ -61,8 +61,34 @@ const CARDS = [{
 
 const PROFILE = {
   isPickup: true,
-  addressPickup: [],
-  address: [],
+  addressPickup: [
+    {
+      address: 'Бишкек, улица Ахматбека Суюмбаева, 12/1',
+      addressid: '1',
+    },
+    {
+      address: 'Бишкек, улица Пушкина, дом Колотушкина',
+      addressid: '2',
+    },
+    {
+      address: 'Бишкек, микрорайон Мажалкыс, улица Ахунбаева Кисы, 23/11',
+      addressid: '3',
+    }
+  ],
+  address: [
+    {
+      address: 'Бишкек, улица Табышалиева, 57',
+      addressid: '1',
+    },
+    {
+      address: 'Бишкек, улица Жукеева-Пудовкина, 77/1',
+      addressid: '2',
+    },
+    {
+      address: 'Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1',
+      addressid: '3',
+    }
+  ],
   cards: [],
 };
 

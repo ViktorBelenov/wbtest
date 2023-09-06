@@ -1,0 +1,30 @@
+.radio-modal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-modal__control-mark {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #bfbfbf;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-modal__input:checked + .radio-modal__control-mark {
+  background-color: $color-deep-magenta;
+  border: 2px solid $color-deep-magenta;
+}
+
+.radio-modal__input:checked + .radio-modal__control-mark::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: $color-default-white;
+  border-radius: 50%;
+};
