@@ -114,9 +114,14 @@
                 <span>Выберите карту</span>
               </div>
               <div class="payment-total__moment">
+                <label class="checkbox payment-total__checkbox">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="" value="">
+                  <span class="checkbox__control-mark"></span>
+                </label>
+                <span class="payment-total__moment-text">Списать оплату сразу</span>
               </div>
             </section>
-            <button class="total__buy"></button>
+            <button class="total__buy second-button">Заказать</button>
             <div class="cutom-checbox-oferta"></div>
           </section>
 
@@ -244,8 +249,9 @@
         <div class="modal__delivery-address">
           <h2>Мои адреса</h2>
         </div>
-
+        <button class="modal__delivery-buy second-button">Выбрать</button>
       </div>
+
       <div class="modal__window modal__payment" data-modal="payment">
         <div>
           <h3 class="modal__title">Способ оплаты</h3>
@@ -255,8 +261,9 @@
             </svg>
           </button>
         </div>
-        <div class="modal__payment-card-place"></div>
-
+        <div class="modal__payment-card-place">
+        </div>
+        <button class="modal__payment-buy second-button">Выбрать</button>
       </div>
 
     </div>

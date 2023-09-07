@@ -20,3 +20,18 @@
   margin: 0;
   background-color: inherit;
 }
+
+.payment-total__moment {
+  display: flex;
+  gap: 8px;
+  padding: 8px 8px 12px 8px;
+  background-color: $ghost-white;
+}
+
+.payment-total__moment-text {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}

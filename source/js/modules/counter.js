@@ -1,7 +1,7 @@
 import {CARDS} from './mock.js';
 import {updatePrice} from './price-update.js';
 import {searchCard} from './search-card.js';
-import {updateTotalPrice} from './total.js';
+import {updateTotalPrice, updateDeliveryButton} from './total.js';
 
 
 const startsCounting = (event) => {
@@ -43,6 +43,7 @@ const startsCounting = (event) => {
   indicator.value = value;
   updatePrice(priceIndicatorContainer, currentCardData);
   updateTotalPrice();
+  updateDeliveryButton();
 };
 
 const addCounter = (card) => {

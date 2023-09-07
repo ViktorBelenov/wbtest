@@ -654,6 +654,13 @@ body {
   letter-spacing: -0.24px;
 }
 
+.total__buy {
+  display: inline-block;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
 .delivery__address-type {
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 16px;
@@ -798,6 +805,14 @@ body {
   gap: 8px;
 }
 
+.modal__payment-buy {
+  width: 164px;
+}
+
+.modal__delivery-buy {
+  width: 164px;
+}
+
 .delivery-radio__control-mark {
   border-radius: 20px;
   border: 2px solid rgba(203, 17, 171, 0.15);
@@ -924,4 +939,37 @@ body {
   padding: 0;
   margin: 0;
   background-color: inherit;
+}
+
+.payment-total__moment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  padding: 8px 8px 12px 8px;
+  background-color: #f6f6fa;
+}
+
+.payment-total__moment-text {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.second-button {
+  margin: 0;
+  border: 0;
+  border-radius: 8px;
+  background-color: #cb11ab;
+  color: #ffffff;
+  padding-top: 7.5px;
+  padding-bottom: 12.5px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
 }

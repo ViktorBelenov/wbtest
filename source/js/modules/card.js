@@ -4,7 +4,7 @@ import {LOW_PRODUCT_AMOUNT} from './objects.js';
 
 import {updatePrice} from './price-update.js';
 import {addCounter, removeCounter} from './counter.js';
-import {setSelectedCardListiner, updateTotalPrice} from './total.js';
+import {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton} from './total.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');

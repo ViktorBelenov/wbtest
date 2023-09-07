@@ -2,7 +2,8 @@
   padding: 16px 24px 24px 24px;
   background-color: $color-default-white;
   border-radius: 16px;
-
+  // display: flex;
+  // flex-direction: column;
 }
 
 .total__price-inner-container {
@@ -33,4 +34,9 @@
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -0.24px;
+}
+
+.total__buy {
+  display: inline-block;
+  height: min-content;
 }

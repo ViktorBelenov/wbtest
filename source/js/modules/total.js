@@ -2,6 +2,29 @@ import {CARDS} from './mock';
 import {MIN_FREE_ORDER_TOTAL_PRICE} from './objects';
 
 
+const totalAmountField = document.querySelector('.total__amount-product');
+const totalField = document.querySelector('.total__price');
+const discountField = document.querySelector('.total__without-discount');
+
+const profitField = document.querySelector('.total__discount');
+const deliveryField = document.querySelector('.total__delivery-price');
+
+const buyNowCheckbox = document.querySelector('.payment-total__checkbox > input');
+const buyButton = document.querySelector('.total__buy');
+
+
+const updateDeliveryButton = () => {
+  const total = document.querySelector('.total__price');
+  if (buyNowCheckbox.checked) {
+    buyButton.textContent = `Оплатить ${total.textContent}`;
+  } else {
+    buyButton.textContent = 'Заказать';
+  }
+};
+
+buyNowCheckbox.addEventListener('change', updateDeliveryButton);
+
+
 const prettierPrice = (total) => {
   const totalArray = Math.ceil(total).toString().split('');
   for (let i = totalArray.length; i > 0; i--) {
@@ -9,7 +32,7 @@ const prettierPrice = (total) => {
       totalArray.splice(totalArray.length - i, 0, ' ');
     }
   }
-  return totalArray.join('').trim();
+  return totalArray.join('').trim() + ' сом';
 };
 
 const isDeliveryFree = (total) => {
@@ -32,13 +55,7 @@ const prettierAmount = (amount) => {
 };
 
 const updateTotalPrice = () => {
-
-  const totalAmountField = document.querySelector('.total__amount-product');
-  const totalField = document.querySelector('.total__price');
-  const discountField = document.querySelector('.total__without-discount');
   const cards = document.querySelectorAll('.card');
-  const profitField = document.querySelector('.total__discount');
-  const deliveryField = document.querySelector('.total__delivery-price');
 
   let total = 0;
   let oldPrice = 0;
@@ -52,7 +69,6 @@ const updateTotalPrice = () => {
       amount = amount + CARDS[id - 1].amount;
     }
   });
-
   profitField.textContent = '-' + prettierPrice(oldPrice - total);
   totalAmountField.textContent = prettierAmount(amount);
   totalField.textContent = prettierPrice(total);
@@ -64,7 +80,8 @@ const setSelectedCardListiner = (card) => {
   const checkbox = card.querySelector('.checkbox__input');
   checkbox.addEventListener('change', ()=>{
     updateTotalPrice();
+    updateDeliveryButton(totalField.textContent);
   });
 };
 
-export {setSelectedCardListiner, updateTotalPrice};
+export {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton};
