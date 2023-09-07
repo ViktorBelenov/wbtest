@@ -102,17 +102,18 @@
               <div class="delivery__refund"></div>
             </section>
             <section class="total__payment payment">
-              <div class="payment__container">
-                <h3 class="payment__type">Оплата картой</h3>
-                <button class="payment__type-setting-button">
+              <div class="payment-total__container">
+                <h3 class="payment-total__type">Оплата картой</h3>
+                <button class="payment-total__type-setting-button">
                   <svg  width="16" height="16">
                     <use xlink:href="img/sprite.svg#pen"></use>
                   </svg>
                 </button>
               </div>
-              <div class="payment__card">
+              <div class="payment-total__card">
+                <span>Выберите карту</span>
               </div>
-              <div class="payment__moment">
+              <div class="payment-total__moment">
               </div>
             </section>
             <button class="total__buy"></button>
@@ -207,6 +208,19 @@
       </div>
     </template>
 
+    <template id="payment">
+      <div class="payment">
+        <label class="radio-modal">
+          <input class="radio-modal__input payment-radio__input visually-hidden" type="radio" name="card" value="">
+          <span class="radio-modal__control-mark"></span>
+          <svg width="32" height="24">
+            <use class="payment__card-logo" xlink:href="" ></use>
+          </svg>
+          <span class="payment__text"></span>
+        </label>
+      </div>
+    </template>
+
     <div class="modal">
       <div class="modal__window modal__delivery" data-modal="delivery">
         <div class="modal__title-container">
@@ -234,13 +248,14 @@
       </div>
       <div class="modal__window modal__payment" data-modal="payment">
         <div>
-          <h3 class="modal__title"></h3>
+          <h3 class="modal__title">Способ оплаты</h3>
           <button class="modal__close-button">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#close"></use>
             </svg>
           </button>
         </div>
+        <div class="modal__payment-card-place"></div>
 
       </div>
 

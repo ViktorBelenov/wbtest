@@ -898,7 +898,7 @@ body {
   fill: #ff3b30;
 }
 
-.payment__type {
+.payment-total__type {
   font-family: "Segoe UI", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -907,7 +907,7 @@ body {
   margin: 0;
 }
 
-.payment__container {
+.payment-total__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -919,7 +919,7 @@ body {
           justify-content: space-between;
 }
 
-.payment__type-setting-button {
+.payment-total__type-setting-button {
   border: 0;
   padding: 0;
   margin: 0;

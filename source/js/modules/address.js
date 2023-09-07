@@ -6,6 +6,30 @@ const addressInTotal = document.querySelector('.delivery__address');
 
 const deliveryTypesFields = document.querySelector('.modal__delivery-setting-container');
 
+const getAddressElement = (id, addresses) => {
+  return addresses.find((element)=> {
+    return element.addressid === id;
+  });
+};
+
+const getAddressElementIndex = (id, addresses) => {
+  return addresses.findIndex((element)=> {
+    return element.addressid === id;
+  });
+};
+
+
+const deleteAddresInData = (address) => {
+  const id = address.querySelector('input').value;
+  let data;
+  if (PROFILE.isPickup) {
+    data = PROFILE.addressPickup;
+  } else {
+    data = PROFILE.address;
+  }
+  data.splice(getAddressElementIndex(id, data), 1);
+};
+
 const clearAddress = () => {
   addressPlace.innerHTML = '';
 };
@@ -19,7 +43,7 @@ const updateAddress = () => {
     data = PROFILE.address;
   }
   if (activeAddress) {
-    addressInTotal.textContent = data[activeAddress.value - 1].address;
+    addressInTotal.textContent = getAddressElement(activeAddress.value, data).address;
   } else {
     addressInTotal.textContent = 'Выберите адрес';
   }
@@ -41,6 +65,7 @@ const getAddress = (element) => {
 const getAddresDeletButton = (address) => {
   address.addEventListener('click', (event)=> {
     if (event.target.closest('.address__delete')) {
+      deleteAddresInData(address);
       address.remove();
       updateAddress();
     }

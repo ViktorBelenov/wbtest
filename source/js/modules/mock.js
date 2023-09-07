@@ -89,7 +89,28 @@ const PROFILE = {
       addressid: '3',
     }
   ],
-  cards: [],
+  cards: [
+    {
+      idcard: 1,
+      number: 8931231232152394,
+      type: 1,
+    },
+    {
+      idcard: 2,
+      number: 8341234332157454,
+      type: 2,
+    },
+    {
+      idcard: 3,
+      number: 8346734332157894,
+      type: 3,
+    },
+    {
+      idcard: 4,
+      number: 1234567812341234,
+      type: 4,
+    }
+  ],
 };
 
 const CARD = {
