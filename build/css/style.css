@@ -942,10 +942,6 @@ body {
 }
 
 .payment-total__moment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
   padding: 8px 8px 12px 8px;
   background-color: #f6f6fa;
 }
@@ -956,6 +952,21 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.payment-total__description {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.payment-total__checkbox {
+  margin-bottom: 10px;
 }
 
 .second-button {
@@ -972,4 +983,64 @@ body {
   font-weight: 700;
   line-height: 24px;
   text-align: center;
+}
+
+.checkbox-oferta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.checkbox-oferta__control-mark {
+  display: block;
+  width: 13px;
+  height: 24px;
+  border: 1px solid #6725a8;
+  margin-right: 11px;
+}
+
+.checkbox-oferta__input:checked + .checkbox-oferta__control-mark {
+  background-image: url("../img/svg/oferta-yes.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+}
+
+.checkbox-oferta__input:hover + .checkbox-oferta__control-mark {
+  opacity: 0.7;
+}
+
+.checkbox-oferta__input:focus + .checkbox-oferta__control-mark {
+  opacity: 0.3;
+}
+
+.checkbox-oferta__input:active + .checkbox-oferta__control-mark {
+  opacity: 0.5;
+}
+
+.checkbox-oferta__description {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.checkbox-oferta__description-link {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.not-avalible-card__imgcontainer {
+  width: 72px;
+  height: 96px;
+  position: relative;
+}
+.not-avalible-card__imgcontainer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(199, 199, 199, 0.7);
+  left: 0;
 }

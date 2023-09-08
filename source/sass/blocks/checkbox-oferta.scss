@@ -1,0 +1,44 @@
+.checkbox-oferta{
+  display: flex;
+}
+
+.checkbox-oferta__control-mark {
+  display: block;
+  width: 13px;
+  height: 24px;
+  border: 1px solid $color-royal-purple;
+
+  margin-right: 11px;
+}
+
+.checkbox-oferta__input:checked + .checkbox-oferta__control-mark {
+  background-image: url("../img/svg/oferta-yes.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+}
+
+.checkbox-oferta__input:hover + .checkbox-oferta__control-mark  {
+  opacity: 0.7;
+}
+
+.checkbox-oferta__input:focus + .checkbox-oferta__control-mark {
+  opacity: 0.3;
+}
+
+.checkbox-oferta__input:active + .checkbox-oferta__control-mark {
+  opacity: 0.5;
+}
+
+.checkbox-oferta__description {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px
+}
+
+.checkbox-oferta__description-link {
+  text-decoration: underline;
+  color: $color-default-black;
+}

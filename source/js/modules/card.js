@@ -7,7 +7,19 @@ import {addCounter, removeCounter} from './counter.js';
 import {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton} from './total.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
+const cardNotAvalibleTemplate = document.querySelector('#not-avalible-card').content.querySelector('.not-avalible-card');
 const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');
+
+const getAvalibleCards = (cards) => {
+  const avalible = cards.filter((element) => element.isAvalible);
+  return avalible;
+};
+
+const getNotgetAvalibleCards = (cards) => {
+  const avalible = cards.filter((element) => !element.isAvalible);
+  return avalible;
+};
+
 
 const getMakerCard = (card, data) => {
   const makerCard = makerCardTemplate.cloneNode('true');
@@ -35,6 +47,7 @@ const getDeleteCard = (card) => {
     removeCounter(card);
     evt.target.closest('.card').remove();
     updateTotalPrice();
+    updateDeliveryButton();
   }, true);
 };
 
@@ -62,9 +75,25 @@ const getCard = (element) => {
   return cardElement;
 };
 
+const getDeleteNotAvalibleCard = (card) => {
+  card.querySelector('.not-avalible-card__delete').addEventListener('click', (evt) => {
+    evt.target.closest('.not-avalible-card').remove();
+  }, true);
+};
+
+const getNotAvalibleCard = (element) => {
+  const cardElement = cardNotAvalibleTemplate.cloneNode(true);
+  setCardDataId(cardElement, element);
+  cardElement.querySelector('.not-avalible-card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.not-avalible-card__title').textContent = element.title;
+  getCardProperties(cardElement, element.properties);
+  return cardElement;
+};
+
 const renderCards = (cards, place) => {
   const fragment = document.createDocumentFragment();
-  cards.forEach((card)=>{
+  const avalibleCards = getAvalibleCards(cards);
+  avalibleCards.forEach((card)=>{
     const newCard = getCard(card);
     addCounter(newCard);
     getDeleteCard(newCard);
@@ -75,6 +104,18 @@ const renderCards = (cards, place) => {
   place.append(fragment);
 };
 
+const renderNotAvalibleCards = (cards, place) => {
+  const fragment = document.createDocumentFragment();
+  const notAvalibleCards = getNotgetAvalibleCards(cards);
+  notAvalibleCards.forEach((card)=>{
+    const newCard = getNotAvalibleCard(card);
+    getDeleteNotAvalibleCard(newCard);
+    fragment.append(newCard);
+  });
+  place.append(fragment);
+};
+
+renderNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
 renderCards(CARDS, document.querySelector('.product__card-container'));
 
 export {renderCards};

@@ -1,0 +1,15 @@
+.not-avalible-card__imgcontainer {
+  width: 72px;
+  height: 96px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(199,199,199, 0.7);
+    left: 0;
+  }
+}
+

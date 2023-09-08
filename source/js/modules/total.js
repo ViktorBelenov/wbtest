@@ -11,14 +11,17 @@ const deliveryField = document.querySelector('.total__delivery-price');
 
 const buyNowCheckbox = document.querySelector('.payment-total__checkbox > input');
 const buyButton = document.querySelector('.total__buy');
+const buyLatterText = document.querySelector('.payment-total__description');
 
 
 const updateDeliveryButton = () => {
   const total = document.querySelector('.total__price');
   if (buyNowCheckbox.checked) {
     buyButton.textContent = `Оплатить ${total.textContent}`;
+    buyLatterText.classList.add('visually-hidden');
   } else {
     buyButton.textContent = 'Заказать';
+    buyLatterText.classList.remove('visually-hidden');
   }
 };
 
