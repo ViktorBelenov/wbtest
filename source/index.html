@@ -84,7 +84,7 @@
               </div>
               <div class="delivery-type__text-container">
                 <div class="delivery-type__where-container">
-                  <span class="delivery-type__where"></span>
+                  <span class="delivery-type__where">Выберите адрес</span>
                   <div class="delivery-type__address-container">
                     <span class="delivery-type__address"></span>
                     <div>
@@ -100,7 +100,28 @@
                 <div class="delivery-type__date-container">
 
                 </div>
+                <div class="delivery-type__refund"></div>
               </div>
+            </section>
+            <section class="payment-basket">
+              <div class="payment-basket__setting">
+                <h3 class="payment-basket__title">Способ оплаты</h3>
+                <button class="payment-basket__setting">Изменить</button>
+              </div>
+              <div class="payment-basket__card-container">
+              </div>
+              <span class="payment-basket__description">Спишем оплату с карты при получении</span>
+            </section>
+            <section class="recipient">
+              <h2 class="recipient__title">Получатель</h2>
+              <form class="recipient__form">
+                <input class="recipient__name">
+                <input class="recipient__surname">
+                <input class="recipient__email">
+                <input class="recipient__number">
+                <input class="recipient__id">
+              </form>
+
             </section>
           </section>
           <section class="total">
@@ -133,7 +154,7 @@
                 </button>
               </div>
               <span class="delivery__address">Выберите адрес</span>
-              <span class="delivery__date">5–8 фев</span>
+              <span class="delivery__date"></span>
               <div class="delivery__refund"></div>
             </section>
             <section class="total__payment payment">
@@ -306,6 +327,7 @@
             <use class="payment__card-logo" xlink:href="" ></use>
           </svg>
           <span class="payment__text"></span>
+          <span class="payment__date visually-hidden"></span>
         </label>
       </div>
     </template>

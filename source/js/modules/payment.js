@@ -4,6 +4,7 @@ const CARDS = PROFILE.cards;
 const cardTemplate = document.querySelector('#payment').content.querySelector('.payment');
 const cardPlace = document.querySelector('.modal__payment-card-place');
 const cardPlaceInTotal = document.querySelector('.payment-total__card');
+const cardPlaceInBasket = document.querySelector('.payment-basket__card-container');
 
 
 const getCardElement = (id, cards) => {
@@ -24,9 +25,17 @@ const updateCardInTotal = () => {
   cardPlaceInTotal.append(getCleanCard(getCard((getCardElement(+activeCard.value, CARDS)))));
 };
 
+const updateCardInBasket = () => {
+  const activeCard = document.querySelector('.payment-radio__input:checked');
+  cardPlaceInBasket.innerHTML = '';
+  cardPlaceInBasket.append(getCleanCard(getCard((getCardElement(+activeCard.value, CARDS)))));
+  cardPlaceInBasket.querySelector('.payment__date').classList.remove('visually-hidden');
+};
+
 const getPaymentRadioListener = (cards) => {
   cards.querySelector('.payment-radio__input').addEventListener('change', ()=> {
     updateCardInTotal();
+    updateCardInBasket();
   });
 };
 
@@ -52,6 +61,7 @@ const getCard = (card) => {
   newCard.querySelector('.payment__text').textContent = encryptCardNumber(card.number);
   getCardIcon(newCard, card);
   newCard.querySelector('.payment-radio__input').value = card.idcard;
+  newCard.querySelector('.payment__date').textContent = card.date;
   return newCard;
 };
 

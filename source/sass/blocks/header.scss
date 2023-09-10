@@ -1,12 +1,12 @@
 .header {
   background-color: $color-royal-purple;
-  padding: 16px 0;
+  padding: 20px 0 17px 0;
 }
 
 .header__wrapper {
   @include wrapper;
 
-  margin-right: 17px;
+  margin-right: 24px;
 
   display: flex;
 
@@ -20,6 +20,7 @@
   margin: 0 16px 0 0;
   padding: 0;
   background-color: transparent;
+  height: 48px;
 
   &:hover {
     opacity: 0.5;
@@ -70,6 +71,8 @@
   display: flex;
   align-items: center;
 
+  height: min-content;
+
   &:hover {
     opacity: 0.5;
   }
@@ -101,7 +104,8 @@
 
 .header__link-container {
   display: flex;
-  gap: 40px;
+  gap: 42px;
+  margin-left: 4px;
 
   @media (max-width:($vp-768 - 1px)) {
     display: none;
@@ -112,6 +116,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  justify-content: space-between;
 
   &:hover {
     opacity: 0.5;

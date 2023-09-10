@@ -1,9 +1,15 @@
-import {DELIVERY} from './mock';
+import {DELIVERY, DELIVERY_DATE} from './mock';
 
 const deliveryDateTempalte = document.querySelector('#delivery-card').content.querySelector('.delivery-card');
 const deliveryDateImgTempalte = document.querySelector('#delivery-card__img').content.querySelector('.delivery-card__img-container');
 
 const deliveryDateContainer = document.querySelector('.delivery-type__date-container');
+
+const deliveryTotal = document.querySelector('.delivery__date');
+
+const updateDeliveryTotal = () => {
+  deliveryTotal.textContent = DELIVERY_DATE;
+};
 
 const getDeliveryCard = (element) => {
   const newDate = deliveryDateTempalte.cloneNode(true);
@@ -26,4 +32,6 @@ const renderDelivery = () => {
   });
   deliveryDateContainer.append(fragment);
 };
+
 renderDelivery();
+updateDeliveryTotal();

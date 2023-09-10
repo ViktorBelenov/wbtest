@@ -6,6 +6,8 @@ const bankCardModalButton = document.querySelector('.payment-total__type-setting
 const bankCardModal = document.querySelector('.modal__payment');
 const bankCardModalBuyButton = document.querySelector('.modal__payment-buy');
 const deliveryDestinationModalBuyButton = document.querySelector('.modal__delivery-buy');
+const deliveryDateButton = document.querySelector('.delivery-type__setting');
+const bankCardBasketButton = document.querySelector('.payment-basket__setting');
 
 const modals = document.querySelectorAll('[data-modal]');
 modals.forEach((element) => {
@@ -40,6 +42,10 @@ bankCardModalButton.addEventListener('click', () => {
   openModal(bankCardModal);
 });
 
+bankCardBasketButton.addEventListener('click', () => {
+  openModal(bankCardModal);
+});
+
 bankCardModalBuyButton.addEventListener('click', () => {
   closeModal();
 });
@@ -50,4 +56,8 @@ bankCardModalBuyButton.addEventListener('click', () => {
 
 deliveryDestinationModalBuyButton.addEventListener('click', () => {
   closeModal();
+});
+
+deliveryDateButton.addEventListener('click', () => {
+  openModal(deliveryDestinationModal);
 });

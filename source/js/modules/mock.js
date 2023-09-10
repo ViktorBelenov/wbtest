@@ -169,21 +169,25 @@ const PROFILE = {
       idcard: 1,
       number: 8931231232152394,
       type: 1,
+      date: '01/30',
     },
     {
       idcard: 2,
       number: 8341234332157454,
       type: 2,
+      date: '01/30',
     },
     {
       idcard: 3,
       number: 8346734332157894,
       type: 3,
+      date: '01/30',
     },
     {
       idcard: 4,
       number: 1234567812341234,
       type: 4,
+      date: '01/30',
     }
   ],
 };
@@ -215,6 +219,8 @@ const DELIVERY = [{
 }
 ];
 
+const DELIVERY_DATE = '5–8 фев';
+
 const CARD = {
   id: 1,
   title: 'Футболка UZcotton мужская',
@@ -227,4 +233,4 @@ const CARD = {
   amountLeft: 2,
 };
 
-export {CARD, PROFILE, CARDS, DELIVERY};
+export {CARD, PROFILE, CARDS, DELIVERY, DELIVERY_DATE};
