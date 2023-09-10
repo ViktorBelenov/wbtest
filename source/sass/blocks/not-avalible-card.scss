@@ -1,7 +1,15 @@
+.not-avalible-card {
+  display: grid;
+  grid-template-columns: 72px 16px 309px 1fr 100px 126px;
+  padding: 12px 0 20px 0;
+}
+
 .not-avalible-card__imgcontainer {
   width: 72px;
   height: 96px;
   position: relative;
+
+  grid-column: 1/2;
 
   &::after {
     content: '';
@@ -13,3 +21,59 @@
   }
 }
 
+.not-avalible-card__text-container {
+  grid-column: 3/4;
+}
+
+.not-avalible-card__button-container {
+  grid-column: 5/6;
+}
+
+.not-avalible-card__title {
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-spun-pearl;
+  margin: 0;
+}
+
+.not-avalible-card__property {
+  font-family: $ff-segoe;
+  color: $color-spun-pearl;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.not-avalible-card__button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.not-avalible-card__favorite {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.not-avalible-card__favorite:hover .not-avalible-card__favorite-img {
+  fill: $color-red-orange;
+}
+
+.not-avalible-card__delete {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.not-avalible-card__delete:hover .not-avalible-card__delete-img {
+  fill: $color-red-orange;
+}

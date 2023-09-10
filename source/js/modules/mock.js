@@ -122,28 +122,46 @@ const PROFILE = {
     {
       address: 'Бишкек, улица Ахматбека Суюмбаева, 12/1',
       addressid: '1',
+      rating: 4.99,
+      workstart: 9,
+      workend: 21,
     },
     {
       address: 'Бишкек, улица Пушкина, дом Колотушкина',
       addressid: '2',
+      rating: 4.56,
+      workstart: 10,
+      workend: 21,
     },
     {
       address: 'Бишкек, микрорайон Мажалкыс, улица Ахунбаева Кисы, 23/11',
       addressid: '3',
+      rating: 3,
+      workstart: 8,
+      workend: 18,
     }
   ],
   address: [
     {
       address: 'Бишкек, улица Табышалиева, 57',
       addressid: '1',
+      rating: 2,
+      workstart: 10,
+      workend: 21,
     },
     {
       address: 'Бишкек, улица Жукеева-Пудовкина, 77/1',
       addressid: '2',
+      rating: 3,
+      workstart: 7,
+      workend: 21,
     },
     {
       address: 'Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1',
       addressid: '3',
+      rating: 2.5,
+      workstart: 3,
+      workend: 22,
     }
   ],
   cards: [

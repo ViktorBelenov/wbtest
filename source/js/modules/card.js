@@ -61,6 +61,16 @@ const getCardProperties = (card, properties) => {
   });
 };
 
+const getCardNotAvalibleProperties = (card, properties) => {
+  const propertisContainer = card.querySelector('.card__properties');
+  properties.forEach((element) => {
+    let newPropertis = document.createElement('span');
+    newPropertis.classList.add('not-avalible-card__property');
+    newPropertis.textContent = element;
+    propertisContainer.append(newPropertis);
+  });
+};
+
 const getCard = (element) => {
   const cardElement = cardTemplate.cloneNode('true');
   setCardDataId(cardElement, element);
@@ -86,7 +96,7 @@ const getNotAvalibleCard = (element) => {
   setCardDataId(cardElement, element);
   cardElement.querySelector('.not-avalible-card__img').src = `img/cards/${element.id}-product.jpg`;
   cardElement.querySelector('.not-avalible-card__title').textContent = element.title;
-  getCardProperties(cardElement, element.properties);
+  getCardNotAvalibleProperties(cardElement, element.properties);
   return cardElement;
 };
 

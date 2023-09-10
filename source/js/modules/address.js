@@ -3,8 +3,12 @@ import {PROFILE} from './mock';
 const addressTemplate = document.querySelector('#address').content.querySelector('.address');
 const addressPlace = document.querySelector('.modal__delivery-address');
 const addressInTotal = document.querySelector('.delivery__address');
+const addressTypeInTotal = document.querySelector('.delivery__address-type');
 
 const deliveryTypesFields = document.querySelector('.modal__delivery-setting-container');
+
+const addressInBusketWhere = document.querySelector('.delivery-type__where');
+const addressInBusketaddress = document.querySelector('.delivery-type__address');
 
 const getAddressElement = (id, addresses) => {
   return addresses.find((element)=> {
@@ -39,13 +43,20 @@ const updateAddress = () => {
   let data;
   if (PROFILE.isPickup) {
     data = PROFILE.addressPickup;
+    addressTypeInTotal.textContent = 'Доставка в пункт выдачи';
+    addressInBusketWhere.textContent = 'Доставка в пункт выдачи';
+
   } else {
     data = PROFILE.address;
+    addressTypeInTotal.textContent = 'Доставка курьером';
+    addressInBusketWhere.textContent = 'Доставка курьером';
   }
   if (activeAddress) {
     addressInTotal.textContent = getAddressElement(activeAddress.value, data).address;
+    addressInBusketaddress.textContent = getAddressElement(activeAddress.value, data).address;
   } else {
     addressInTotal.textContent = 'Выберите адрес';
+    addressInBusketaddress.textContent = 'Выберите адрес';
   }
 };
 
