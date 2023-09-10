@@ -188,6 +188,33 @@ const PROFILE = {
   ],
 };
 
+const DELIVERY = [{
+  date: '5-6 февраля',
+  cards: [{
+    idcard: 1,
+    amount: 1,
+  },
+  {
+    idcard: 2,
+    amount: 184,
+  },
+  {
+    idcard: 3,
+    amount: 2,
+  }
+  ],
+},
+{
+  date: '7-8 февраля',
+  cards: [
+    {
+      idcard: 2,
+      amount: 16,
+    }
+  ],
+}
+];
+
 const CARD = {
   id: 1,
   title: 'Футболка UZcotton мужская',
@@ -200,4 +227,4 @@ const CARD = {
   amountLeft: 2,
 };
 
-export {CARD, PROFILE, CARDS};
+export {CARD, PROFILE, CARDS, DELIVERY};

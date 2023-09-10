@@ -87,11 +87,14 @@
                   <span class="delivery-type__where"></span>
                   <div class="delivery-type__address-container">
                     <span class="delivery-type__address"></span>
-                    <span></span>
+                    <div>
+                      <span class="delivery-type__rating"></span>
+                      <span class="delivery-type__work-time"></span>
+                    </div>
                   </div>
                 </div>
                 <div class="delivery-type__price-container">
-                  <span class="delivery-type__price-title"></span>
+                  <span class="delivery-type__price-title">Стоимость доставки</span>
                   <span class="delivery-type__price"></span>
                 </div>
                 <div class="delivery-type__date-container">
@@ -260,6 +263,21 @@
         <span class="maker__id"></span>
         <span class="maker__address"></span>
       </section>
+    </template>
+
+    <template id="delivery-card">
+      <div class="delivery-card">
+        <span class="delivery-card__date"></span>
+        <div class="delivery-card__product-container">
+        </div>
+      </div>
+    </template>
+
+    <template id="delivery-card__img">
+      <div class="delivery-card__img-container">
+        <img class="delivery-card__img">
+        <span class="delivery-card__amount"></span>
+      </div>
     </template>
 
     <template id="address">

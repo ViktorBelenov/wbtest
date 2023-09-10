@@ -13,6 +13,8 @@ const buyNowCheckbox = document.querySelector('.payment-total__checkbox > input'
 const buyButton = document.querySelector('.total__buy');
 const buyLatterText = document.querySelector('.payment-total__description');
 
+const deliveryFree = document.querySelector('.delivery-type__price');
+
 
 const updateDeliveryButton = () => {
   const total = document.querySelector('.total__price');
@@ -77,6 +79,7 @@ const updateTotalPrice = () => {
   totalField.textContent = prettierPrice(total);
   discountField.textContent = prettierPrice(oldPrice);
   deliveryField.textContent = isDeliveryFree(total);
+  deliveryFree.textContent = isDeliveryFree(total);
 };
 
 const setSelectedCardListiner = (card) => {

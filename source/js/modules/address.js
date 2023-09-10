@@ -10,6 +10,15 @@ const deliveryTypesFields = document.querySelector('.modal__delivery-setting-con
 const addressInBusketWhere = document.querySelector('.delivery-type__where');
 const addressInBusketaddress = document.querySelector('.delivery-type__address');
 
+const addressInBusketRating = document.querySelector('.delivery-type__rating');
+const addressInBusketTime = document.querySelector('.delivery-type__work-time');
+
+
+const updateRatingTimeAddress = (data) => {
+  addressInBusketRating.textContent = data.rating;
+  addressInBusketTime.textContent = `Ежедневно с ${data.workstart} до ${data.workend}`;
+};
+
 const getAddressElement = (id, addresses) => {
   return addresses.find((element)=> {
     return element.addressid === id;
@@ -54,6 +63,7 @@ const updateAddress = () => {
   if (activeAddress) {
     addressInTotal.textContent = getAddressElement(activeAddress.value, data).address;
     addressInBusketaddress.textContent = getAddressElement(activeAddress.value, data).address;
+    updateRatingTimeAddress(getAddressElement(activeAddress.value, data));
   } else {
     addressInTotal.textContent = 'Выберите адрес';
     addressInBusketaddress.textContent = 'Выберите адрес';
