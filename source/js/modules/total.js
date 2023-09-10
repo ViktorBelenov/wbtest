@@ -37,7 +37,7 @@ const prettierPrice = (total) => {
       totalArray.splice(totalArray.length - i, 0, ' ');
     }
   }
-  return totalArray.join('').trim() + ' сом';
+  return totalArray.join('').trim();
 };
 
 const isDeliveryFree = (total) => {
@@ -74,10 +74,10 @@ const updateTotalPrice = () => {
       amount = amount + CARDS[id - 1].amount;
     }
   });
-  profitField.textContent = '-' + prettierPrice(oldPrice - total);
+  profitField.textContent = '-' + prettierPrice(oldPrice - total) + ' сом';
   totalAmountField.textContent = prettierAmount(amount);
   totalField.textContent = prettierPrice(total);
-  discountField.textContent = prettierPrice(oldPrice);
+  discountField.textContent = prettierPrice(oldPrice) + ' сом';
   deliveryField.textContent = isDeliveryFree(total);
   deliveryFree.textContent = isDeliveryFree(total);
 };

@@ -18,13 +18,17 @@
   line-height: 24px;
 }
 
+.total__price-inner-container--first {
+  margin-bottom: 8px;
+}
+
 .tolal__title {
   font-family: $ff-segoe;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-  letter-spacing: -0.24px;
+  letter-spacing: 0px;
 
   margin: 0;
 }
@@ -35,7 +39,15 @@
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-  letter-spacing: -0.24px;
+}
+
+.total__price-currency{
+  font-family: $ff-segoe;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
 }
 
 .total__buy {
