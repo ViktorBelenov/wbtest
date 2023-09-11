@@ -15,3 +15,12 @@
   font-display: swap;
   src: url("../fonts/segoe-ui/SegoeUI-Bold.woff2") format("woff2");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Segoe UI";
+
+  font-display: swap;
+  src: url("../fonts/segoe-ui/SegoeUI-SemiBold.woff2") format("woff2");
+}

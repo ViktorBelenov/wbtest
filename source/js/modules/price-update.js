@@ -1,9 +1,11 @@
+import {prettierPrice} from './total.js';
+
 const updatePrice = (priceContainer, data) => {
   const actualPrice = priceContainer.querySelector('.card__actual-price');
   const oldPrice = priceContainer.querySelector('.card__past-price');
 
-  actualPrice.textContent = `${Math.ceil(data.amount * data.actualPrice)} сом`;
-  oldPrice.textContent = `${Math.ceil(data.amount * data.oldPrice)} сом`;
+  actualPrice.textContent = prettierPrice(Math.ceil(data.amount * data.actualPrice));
+  oldPrice.textContent = prettierPrice(Math.ceil(data.amount * data.oldPrice)) + 'сом';
 
   if ((data.amount * data.actualPrice).toString().length > 5) {
     actualPrice.classList.add('card__actual-price--smaller-letter');
@@ -13,3 +15,6 @@ const updatePrice = (priceContainer, data) => {
 };
 
 export {updatePrice};
+
+// `${Math.ceil(data.amount * data.actualPrice)}`;
+// `${Math.ceil(data.amount * data.oldPrice)}

@@ -53,7 +53,7 @@ const updateAddress = () => {
   if (PROFILE.isPickup) {
     data = PROFILE.addressPickup;
     addressTypeInTotal.textContent = 'Доставка в пункт выдачи';
-    addressInBusketWhere.textContent = 'Доставка в пункт выдачи';
+    addressInBusketWhere.textContent = 'Пункт выдачи';
 
   } else {
     data = PROFILE.address;

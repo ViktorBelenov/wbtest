@@ -9,6 +9,7 @@ import {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton} from '.
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 const cardNotAvalibleTemplate = document.querySelector('#not-avalible-card').content.querySelector('.not-avalible-card');
 const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');
+const amountNotAvalibleCard = document.querySelector('.no-avalible__amount');
 
 const getAvalibleCards = (cards) => {
   const avalible = cards.filter((element) => element.isAvalible);
@@ -71,6 +72,10 @@ const getCardNotAvalibleProperties = (card, properties) => {
   });
 };
 
+const updateAmountCard = (amount) => {
+  amountNotAvalibleCard.textContent = ` · ${amount} товара`;
+};
+
 const getCard = (element) => {
   const cardElement = cardTemplate.cloneNode('true');
   setCardDataId(cardElement, element);
@@ -122,6 +127,7 @@ const renderNotAvalibleCards = (cards, place) => {
     getDeleteNotAvalibleCard(newCard);
     fragment.append(newCard);
   });
+  updateAmountCard(notAvalibleCards.length);
   place.append(fragment);
 };
 

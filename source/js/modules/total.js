@@ -90,4 +90,4 @@ const setSelectedCardListiner = (card) => {
   });
 };
 
-export {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton};
+export {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton, prettierPrice};

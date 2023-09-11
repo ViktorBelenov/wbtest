@@ -80,7 +80,7 @@
             <section class="basket__delivery delivery-type">
               <div class="delivery-type__setting">
                 <h3 class="delivery-type__title">Способ доставки</h3>
-                <button class="delivery-type__setting">Изменить</button>
+                <button class="delivery-type__setting-button">Изменить</button>
               </div>
               <div class="delivery-type__text-container">
                 <div class="delivery-type__where-container">
@@ -88,7 +88,13 @@
                   <div class="delivery-type__address-container">
                     <span class="delivery-type__address"></span>
                     <div>
-                      <span class="delivery-type__rating"></span>
+                      <span class="delivery-type__star">
+                        <svg width="12" height="12">
+                          <use xlink:href="img/sprite.svg#star"></use>
+                        </svg>
+                      </span>
+                      <span class="delivery-type__rating">
+                      </span>
                       <span class="delivery-type__work-time"></span>
                     </div>
                   </div>
@@ -253,7 +259,10 @@
           </div>
         </div>
         <div class="card__price-container">
-          <span class="card__actual-price"></span>
+          <div>
+            <span class="card__actual-price"></span>
+            <span class="card__actual-price-currency">сом</span>
+          </div>
           <span class="card__past-price"></span>
         </div>
       </div>

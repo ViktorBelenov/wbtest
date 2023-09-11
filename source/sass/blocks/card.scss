@@ -1,11 +1,14 @@
 .card {
   display: grid;
-  grid-template-columns: 35px 72px 16px 275px 1fr 100px 6px 110px;
-  padding: 12px 0 20px 0;
+  grid-template-columns: 35px 72px 16px 275px 1fr 100px 6px 120px;
+  padding: 12px 0 5px 0;
+  margin-bottom: 13px;
 }
 
 .card__checkbox {
-  align-self: center;
+  align-self: flex-start;
+  margin-top: 40px;
+
 }
 
 .card__img {
@@ -90,7 +93,7 @@
 }
 
 .card__counter {
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
 }
 
 .card__amount-warning {
@@ -101,7 +104,7 @@
   font-weight: 400;
   line-height: 16px;
 
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .card__button-container {
@@ -158,6 +161,14 @@
     letter-spacing: 0;
     font-size: 16px;
   }
+}
+
+.card__actual-price-currency {
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .card__past-price {
