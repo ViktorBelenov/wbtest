@@ -50,7 +50,14 @@
   letter-spacing: -0.2px;
 }
 
-.total__buy {
-  display: inline-block;
-  height: min-content;
+.total__price-container {
+  margin-bottom: 26px;
 }
+
+.total__buy {
+  height: min-content;
+  width: 100%;
+
+  margin-bottom: 10px;
+}
+

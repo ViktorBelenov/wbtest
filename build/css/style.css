@@ -266,8 +266,8 @@ body {
   background-color: #f6f6fa;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 32%;
-  grid-template-columns: 1fr 32%;
+  -ms-grid-columns: 1fr 429px;
+  grid-template-columns: 1fr 429px;
   -webkit-column-gap: 32px;
      -moz-column-gap: 32px;
           column-gap: 32px;
@@ -675,11 +675,16 @@ body {
   letter-spacing: -0.2px;
 }
 
+.total__price-container {
+  margin-bottom: 26px;
+}
+
 .total__buy {
-  display: inline-block;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .delivery__address-type {
@@ -688,7 +693,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  margin: 0;
+  margin: 0 0 4px 0;
 }
 
 .delivery__address-container {
@@ -708,6 +713,40 @@ body {
   padding: 0;
   margin: 0;
   background-color: inherit;
+}
+
+.delivery__address {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.delivery__date {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: #cb11ab;
+  position: relative;
+}
+.delivery__date::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/svg/underline.svg");
+  height: 1px;
+  width: 100%;
+  bottom: -3px;
+  left: 0;
+}
+
+.delivery__refund {
+  margin-top: 12px;
+  margin-bottom: 25px;
 }
 
 .maker {
@@ -943,6 +982,11 @@ body {
   margin: 0;
 }
 
+.payment-total__card {
+  padding-top: 2px;
+  margin-bottom: 13px;
+}
+
 .payment-total__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,6 +1009,8 @@ body {
 .payment-total__moment {
   padding: 8px 8px 12px 8px;
   background-color: #f6f6fa;
+  border-radius: 8px;
+  margin-bottom: 23px;
 }
 
 .payment-total__moment-text {
@@ -987,11 +1033,10 @@ body {
 }
 
 .payment-total__checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .second-button {
-  margin: 0;
   border: 0;
   border-radius: 8px;
   background-color: #cb11ab;
@@ -1176,4 +1221,46 @@ body {
   background-image: url("../img/svg/product-list-close.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.refund {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 8px 12px 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.refund__text {
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.refund__link {
+  color: #0cb477;
+  text-decoration: none;
+  position: relative;
+}
+.refund__link::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-image: url("../img/svg/underline-sber.svg");
+  bottom: -3px;
+  left: 0;
+  position: absolute;
+}
+
+.payment__text {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
 }

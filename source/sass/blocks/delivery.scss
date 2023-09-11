@@ -5,7 +5,7 @@
   font-weight: 700;
   line-height: 24px;
 
-  margin: 0;
+  margin: 0 0 4px 0;
 }
 
 .delivery__address-container {
@@ -19,4 +19,39 @@
   padding: 0;
   margin: 0;
   background-color: inherit;
+}
+
+.delivery__address {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.delivery__date {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: $color-deep-magenta;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/svg/underline.svg");
+    height: 1px;
+    width: 100%;
+    bottom: -3px;
+    left: 0;
+  }
+}
+
+.delivery__refund {
+  margin-top: 12px;
+  margin-bottom: 25px;
 }

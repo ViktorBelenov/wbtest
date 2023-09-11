@@ -8,6 +8,11 @@
   margin: 0;
 }
 
+.payment-total__card {
+  padding-top: 2px;
+  margin-bottom: 13px;
+}
+
 .payment-total__container {
   display: flex;
   align-items: center;
@@ -24,6 +29,10 @@
 .payment-total__moment {
   padding: 8px 8px 12px 8px;
   background-color: $ghost-white;
+
+  border-radius: 8px;
+
+  margin-bottom: 23px;
 }
 
 .payment-total__moment-text {
@@ -45,5 +54,5 @@
 }
 
 .payment-total__checkbox{
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
