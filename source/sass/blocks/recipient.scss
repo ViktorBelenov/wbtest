@@ -1,0 +1,16 @@
+.recipient {
+  padding: 16px 24px 24px 24px;
+  border-radius: 16px;
+  background-color: $color-default-white;
+}
+
+.recipient__title {
+  font-family: $ff-segoe;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+
+  margin: 0;
+}

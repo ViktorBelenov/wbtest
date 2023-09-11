@@ -19,6 +19,9 @@ const getDeliveryCard = (element) => {
     const newImg = deliveryDateImgTempalte.cloneNode(true);
     newImg.querySelector('.delivery-card__img').src = `img/cards/${card.idcard}-product.jpg`;
     newImg.querySelector('.delivery-card__amount').textContent = card.amount;
+    if (card.amount === 1) {
+      newImg.querySelector('.delivery-card__amount').classList.add('visually-hidden');
+    }
     newDateImgContainer.append(newImg);
   });
   return newDate;

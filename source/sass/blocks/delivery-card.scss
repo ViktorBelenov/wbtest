@@ -1,0 +1,48 @@
+.delivery-card {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 10px;
+}
+
+.delivery-card__date {
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.delivery-card__img {
+  width: 40px;
+  height: 56px;
+  border-radius: 8px;
+}
+
+.delivery-card__product-container {
+  display: flex;
+  gap: 8px;
+}
+
+.delivery-card__img-container {
+  position: relative;
+}
+
+.delivery-card__amount {
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: -10px;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 16px;
+
+  text-align: center;
+  padding: 0 4px 2px 4px;
+  font-family: $ff-segoe;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  background-color: $color-outrageous-orange;
+  color: $color-default-white;
+}

@@ -7,7 +7,7 @@ const bankCardModal = document.querySelector('.modal__payment');
 const bankCardModalBuyButton = document.querySelector('.modal__payment-buy');
 const deliveryDestinationModalBuyButton = document.querySelector('.modal__delivery-buy');
 const deliveryDateButton = document.querySelector('.delivery-type__setting-button');
-const bankCardBasketButton = document.querySelector('.payment-basket__setting');
+const bankCardBasketButton = document.querySelector('.payment-basket__setting-button');
 
 const modals = document.querySelectorAll('[data-modal]');
 modals.forEach((element) => {

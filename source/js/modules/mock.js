@@ -193,7 +193,7 @@ const PROFILE = {
 };
 
 const DELIVERY = [{
-  date: '5-6 февраля',
+  date: '5—6 февраля',
   cards: [{
     idcard: 1,
     amount: 1,
@@ -209,7 +209,7 @@ const DELIVERY = [{
   ],
 },
 {
-  date: '7-8 февраля',
+  date: '7—8 февраля',
   cards: [
     {
       idcard: 2,

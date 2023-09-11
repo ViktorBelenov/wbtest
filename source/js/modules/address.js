@@ -12,6 +12,7 @@ const addressInBusketaddress = document.querySelector('.delivery-type__address')
 
 const addressInBusketRating = document.querySelector('.delivery-type__rating');
 const addressInBusketTime = document.querySelector('.delivery-type__work-time');
+const starInBusket = document.querySelector('.delivery-type__star');
 
 
 const updateRatingTimeAddress = (data) => {
@@ -64,9 +65,12 @@ const updateAddress = () => {
     addressInTotal.textContent = getAddressElement(activeAddress.value, data).address;
     addressInBusketaddress.textContent = getAddressElement(activeAddress.value, data).address;
     updateRatingTimeAddress(getAddressElement(activeAddress.value, data));
+    starInBusket.classList.remove('visually-hidden');
+
   } else {
     addressInTotal.textContent = 'Выберите адрес';
     addressInBusketaddress.textContent = 'Выберите адрес';
+    starInBusket.classList.add('visually-hidden');
   }
 };
 

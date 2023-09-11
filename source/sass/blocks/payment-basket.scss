@@ -1,0 +1,57 @@
+.payment-basket {
+  padding: 16px 24px 24px 24px;
+  border-radius: 16px;
+  background-color: $color-default-white;
+}
+
+.payment-basket__title {
+  font-family: $ff-segoe;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+
+  margin: 0;
+}
+
+.payment-basket__setting {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.payment-basket__setting-button {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: $color-deep-magenta;
+}
+
+.payment-basket__text {
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.payment-basket__description {
+  margin-top: 5px;
+  display: block;
+
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+
+  color: $color-spun-pearl;
+}

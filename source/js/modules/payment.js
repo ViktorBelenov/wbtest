@@ -29,6 +29,7 @@ const updateCardInBasket = () => {
   const activeCard = document.querySelector('.payment-radio__input:checked');
   cardPlaceInBasket.innerHTML = '';
   cardPlaceInBasket.append(getCleanCard(getCard((getCardElement(+activeCard.value, CARDS)))));
+  cardPlaceInBasket.querySelector('.payment__text').classList.add('payment-basket__text');
   cardPlaceInBasket.querySelector('.payment__date').classList.remove('visually-hidden');
 };
 
