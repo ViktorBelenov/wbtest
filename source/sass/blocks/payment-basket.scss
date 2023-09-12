@@ -2,6 +2,10 @@
   padding: 16px 24px 24px 24px;
   border-radius: 16px;
   background-color: $color-default-white;
+
+  @media (max-width:768px) {
+    padding: 16px;
+  }
 }
 
 .payment-basket__title {
@@ -13,6 +17,12 @@
   letter-spacing: -0.24px;
 
   margin: 0;
+
+  @media (max-width:768px) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
 }
 
 .payment-basket__setting {
@@ -20,6 +30,10 @@
   justify-content: space-between;
 
   margin-bottom: 16px;
+
+  @media (max-width:768px) {
+    margin-bottom: 10px;
+  }
 }
 
 .payment-basket__setting-button {
@@ -54,4 +68,8 @@
   line-height: 16px;
 
   color: $color-spun-pearl;
+
+  @media (max-width:768px) {
+    margin-top: 0;
+  }
 }

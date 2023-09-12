@@ -1,0 +1,16 @@
+.tabbar {
+  display: none;
+  padding: 16px;
+
+  @media (max-width:768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+  }
+}
+
+// .tabbar__link:hover svg{
+//   fill: $color-deep-magent;
+// }

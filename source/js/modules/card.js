@@ -20,6 +20,7 @@ const cardMobileTemplate = document.querySelector('#mobile-card').content.queryS
 const amountNotAvalibleCard = document.querySelector('.no-avalible__amount');
 
 const cardContainer = document.querySelector('.product__card-container');
+const notAlalibleCardContainer = document.querySelector('.no-avalible__card-container');
 
 const choseAllButton = document.querySelector('.check-all-card');
 
@@ -248,8 +249,26 @@ const renderMobileNotAvalibleCards = (cards, place) => {
   place.append(fragment);
 };
 
-renderMobileNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
-renderMobileCards(CARDS, cardContainer);
+// renderMobileNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
+// renderMobileCards(CARDS, cardContainer);
+const clearAllCards = () => {
+  document.querySelector('.no-avalible__card-container').innerHTML = '';
+  cardContainer.innerHTML = '';
+};
 
+
+const renderActualCards = () => {
+  const newWidth = window.innerWidth;
+  clearAllCards();
+  if (newWidth < 768) {
+    renderMobileNotAvalibleCards(CARDS, notAlalibleCardContainer);
+    renderMobileCards(CARDS, cardContainer);
+  } else {
+    renderNotAvalibleCards(CARDS, notAlalibleCardContainer);
+    renderCards(CARDS, cardContainer);
+  }
+};
+
+window.addEventListener('resize', renderActualCards);
 
 export {renderCards};

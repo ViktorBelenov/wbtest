@@ -12,6 +12,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .delivery__address-setting-button {
@@ -29,6 +33,10 @@
   line-height: 16px;
   display: block;
   margin-bottom: 4px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .delivery__date {
@@ -49,6 +57,10 @@
     bottom: -3px;
     left: 0;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .delivery__refund {
@@ -57,4 +69,8 @@
   border-radius: 8px;
 
   background-color: $ghost-white;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 }

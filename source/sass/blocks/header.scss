@@ -1,6 +1,10 @@
 .header {
   background-color: $color-royal-purple;
   padding: 20px 0 17px 0;
+
+  @media (max-width:(1000px)) {
+    padding: 5px 0 0 0;
+  }
 }
 
 .header__wrapper {

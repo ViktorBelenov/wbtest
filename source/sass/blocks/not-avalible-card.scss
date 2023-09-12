@@ -58,6 +58,10 @@
   display: flex;
   justify-content: flex-end;
   gap: 16px;
+
+  @media (max-width:768px) {
+    gap: 0;
+  }
 }
 
 .not-avalible-card__favorite {
@@ -68,6 +72,10 @@
   cursor: pointer;
 
   align-self: flex-start;
+
+  @media (max-width:768px) {
+    padding: 12px;
+  }
 }
 
 .not-avalible-card__favorite:hover .not-avalible-card__favorite-img {
@@ -82,6 +90,10 @@
   cursor: pointer;
 
   align-self: flex-start;
+
+  @media (max-width:768px) {
+    padding: 12px;
+  }
 }
 
 .not-avalible-card__delete:hover .not-avalible-card__delete-img {

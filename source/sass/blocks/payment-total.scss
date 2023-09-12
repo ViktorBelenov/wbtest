@@ -11,12 +11,20 @@
 .payment-total__card {
   padding-top: 2px;
   margin-bottom: 13px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .payment-total__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .payment-total__type-setting-button{
