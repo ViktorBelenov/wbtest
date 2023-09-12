@@ -24,9 +24,9 @@ const raisesPlaceholder = (container) => {
   container.querySelector('.recipient__input-placeholder').style.top = '-20px';
 };
 
-const letDownPlaceholder = (container) => {
-  container.querySelector('.recipient__input-placeholder').style.top = '0px';
-};
+// const letDownPlaceholder = (container) => {
+//   container.querySelector('.recipient__input-placeholder').style.top = '0px';
+// };
 
 form.addEventListener('click', (event) => {
   if (event.target.closest('input')) {

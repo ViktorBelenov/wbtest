@@ -11,6 +11,10 @@ const cardNotAvalibleTemplate = document.querySelector('#not-avalible-card').con
 const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');
 const amountNotAvalibleCard = document.querySelector('.no-avalible__amount');
 
+const cardContainer = document.querySelector('.product__card-container');
+
+const choseAllButton = document.querySelector('.check-all-card');
+
 const getAvalibleCards = (cards) => {
   const avalible = cards.filter((element) => element.isAvalible);
   return avalible;
@@ -21,6 +25,29 @@ const getNotgetAvalibleCards = (cards) => {
   return avalible;
 };
 
+
+const chooseAll = () => {
+  const checkboxs = cardContainer.querySelectorAll('input');
+  checkboxs.forEach((element) => {
+    element.checked = true;
+  });
+};
+
+const unChooseAll = () => {
+  const checkboxs = cardContainer.querySelectorAll('input');
+  checkboxs.forEach((element) => {
+    element.checked = false;
+  });
+};
+
+choseAllButton.addEventListener('change', ()=>{
+  if (choseAllButton.checked) {
+    chooseAll();
+  } else {
+    unChooseAll();
+  }
+  updateTotalPrice();
+});
 
 const getMakerCard = (card, data) => {
   const makerCard = makerCardTemplate.cloneNode('true');
@@ -132,6 +159,6 @@ const renderNotAvalibleCards = (cards, place) => {
 };
 
 renderNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
-renderCards(CARDS, document.querySelector('.product__card-container'));
+renderCards(CARDS, cardContainer);
 
 export {renderCards};

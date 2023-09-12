@@ -16,5 +16,3 @@ const updatePrice = (priceContainer, data) => {
 
 export {updatePrice};
 
-// `${Math.ceil(data.amount * data.actualPrice)}`;
-// `${Math.ceil(data.amount * data.oldPrice)}

@@ -1,0 +1,16 @@
+.footer {
+  background-color: $color-royal-purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.footer__copyright {
+  font-family: $ff-segoe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.70);
+}

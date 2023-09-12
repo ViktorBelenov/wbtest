@@ -10,11 +10,11 @@
 
 // Blocks
 // ---------------------------------
-@import "blocks/search";
-@import "blocks/header";
-@import "blocks/basket";
-@import "blocks/product";
-@import "blocks/checkbox";
+@import "blocks/search.scss";
+@import "blocks/header.scss";
+@import "blocks/basket.scss";
+@import "blocks/product.scss";
+@import "blocks/checkbox.scss";
 @import "blocks/card.scss";
 @import "blocks/counter.scss";
 @import "blocks/total.scss";
@@ -35,5 +35,5 @@
 @import "blocks/delivery-card.scss";
 @import "blocks/payment-basket.scss";
 @import "blocks/recipient.scss";
-
+@import "blocks/footer.scss";
 
