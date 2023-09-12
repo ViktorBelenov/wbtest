@@ -9,6 +9,10 @@ import {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton} from '.
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 const cardNotAvalibleTemplate = document.querySelector('#not-avalible-card').content.querySelector('.not-avalible-card');
 const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');
+
+const cardMobileTemplate = document.querySelector('#mobile-card').content.querySelector('.mobile-card');
+
+
 const amountNotAvalibleCard = document.querySelector('.no-avalible__amount');
 
 const cardContainer = document.querySelector('.product__card-container');
@@ -46,7 +50,7 @@ choseAllButton.addEventListener('change', ()=>{
   } else {
     unChooseAll();
   }
-  updateTotalPrice();
+  updateTotalPrice('.card');
 });
 
 const getMakerCard = (card, data) => {
@@ -74,7 +78,7 @@ const getDeleteCard = (card) => {
   card.querySelector('.card__delete').addEventListener('click', (evt) => {
     removeCounter(card);
     evt.target.closest('.card').remove();
-    updateTotalPrice();
+    updateTotalPrice('.card');
     updateDeliveryButton();
   }, true);
 };
@@ -141,7 +145,7 @@ const renderCards = (cards, place) => {
     getDeleteCard(newCard);
     getMakerCard(newCard, card);
     fragment.append(newCard);
-    setSelectedCardListiner(newCard);
+    setSelectedCardListiner(newCard, '.card');
   });
   place.append(fragment);
 };
@@ -159,8 +163,54 @@ const renderNotAvalibleCards = (cards, place) => {
 };
 
 renderNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
-renderCards(CARDS, cardContainer);
+// renderCards(CARDS, cardContainer);
 
-const getMobileCard = () => {};
+const getMobileCardProperties = (card, properties) => {
+  const propertisContainer = card.querySelector('.mobile-card__propirties-container');
+  properties.forEach((element) => {
+    let newPropertis = document.createElement('span');
+    newPropertis.classList.add('mobile-card__property');
+    newPropertis.textContent = element;
+    propertisContainer.append(newPropertis);
+  });
+};
+
+const getSpecialMobileProperti = (card, properti) => {
+  if (properti) {
+    const special = card.querySelector('.mobile-card__propirties-special');
+    special.textContent = properti;
+  }
+};
+
+const getMobileCard = (element) => {
+  const cardElement = cardMobileTemplate.cloneNode(true);
+  setCardDataId(cardElement, element);
+  cardElement.querySelector('.mobile-card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.mobile-card__title').textContent = element.title;
+  cardElement.querySelector('.mobile-card__stock').textContent = element.stock;
+  cardElement.querySelector('.counter__input').value = element.amount;
+  getWarningAboutAmount(cardElement, element.amountLeft);
+  updatePrice(cardElement, element);
+
+  getSpecialMobileProperti(cardElement, element.specialProperti);
+  getMobileCardProperties(cardElement, element.mobilePropertis);
+
+  return cardElement;
+};
+
+const renderMobileCards = (cards, place) => {
+  const fragment = document.createDocumentFragment();
+  const avalibleCards = getAvalibleCards(cards);
+  avalibleCards.forEach((card)=>{
+    const newCard = getMobileCard(card);
+    addCounter(newCard);
+    getDeleteCard(newCard);
+    fragment.append(newCard);
+    setSelectedCardListiner(newCard, '.mobile-card');
+  });
+  place.append(fragment);
+};
+
+renderMobileCards(CARDS, cardContainer);
 
 export {renderCards};

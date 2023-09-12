@@ -59,8 +59,8 @@ const prettierAmount = (amount) => {
   return amount + ' ' + add;
 };
 
-const updateTotalPrice = () => {
-  const cards = document.querySelectorAll('.card');
+const updateTotalPrice = (selector) => {
+  const cards = document.querySelectorAll(selector);
 
   let total = 0;
   let oldPrice = 0;
@@ -82,10 +82,35 @@ const updateTotalPrice = () => {
   deliveryFree.textContent = isDeliveryFree(total);
 };
 
-const setSelectedCardListiner = (card) => {
+
+// const updateTotalPrice = () => {
+//   const cards = document.querySelectorAll('.card');
+
+//   let total = 0;
+//   let oldPrice = 0;
+//   let amount = 0;
+
+//   cards.forEach((element) => {
+//     let id = element.dataset.id;
+//     if (element.querySelector('.checkbox__input').checked) {
+//       total = total + CARDS[id - 1].amount * CARDS[id - 1].actualPrice;
+//       oldPrice = oldPrice + CARDS[id - 1].amount * CARDS[id - 1].oldPrice;
+//       amount = amount + CARDS[id - 1].amount;
+//     }
+//   });
+//   profitField.textContent = '-' + prettierPrice(oldPrice - total) + ' сом';
+//   totalAmountField.textContent = prettierAmount(amount);
+//   totalField.textContent = prettierPrice(total);
+//   discountField.textContent = prettierPrice(oldPrice) + ' сом';
+//   deliveryField.textContent = isDeliveryFree(total);
+//   deliveryFree.textContent = isDeliveryFree(total);
+// };
+
+
+const setSelectedCardListiner = (card, selector) => {
   const checkbox = card.querySelector('.checkbox__input');
   checkbox.addEventListener('change', ()=>{
-    updateTotalPrice();
+    updateTotalPrice(selector);
     updateDeliveryButton(totalField.textContent);
   });
 };
