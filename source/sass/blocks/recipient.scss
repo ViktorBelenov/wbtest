@@ -53,6 +53,31 @@
   flex-grow: 1;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+  height: 24px;
+
+  font-family: $ff-segoe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  &:focus {
+    border: 0;
+    outline: none;
+  }
+}
+
+.recipient__error-message {
+  position: absolute;
+  bottom: -20px;
+
+  font-family: $ff-segoe;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+
+  color: $color-outrageous-orange;
 }
 
 .recipient__input-placeholder {
@@ -64,6 +89,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.recipient__input-container .recipient__error {
+  color: $color-outrageous-orange;
+  border-bottom: 1px solid $color-outrageous-orange;
 }
 
 .recipient__id-description {
