@@ -137,11 +137,32 @@
             <section class="recipient">
               <h2 class="recipient__title">Получатель</h2>
               <form class="recipient__form">
-                <input class="recipient__name">
-                <input class="recipient__surname">
-                <input class="recipient__email">
-                <input class="recipient__number">
-                <input class="recipient__id">
+                <div class="recipient__name-container recipient__input-container">
+                  <span class="recipient__input-placeholder">Имя</span>
+                  <input class="recipient__name">
+                  <span class="recipient__error-message visually-hidden">Укажите имя</span>
+                </div>
+                <div class="recipient__surname-container recipient__input-container">
+                  <span class="recipient__input-placeholder">Фамилия</span>
+                  <input class="recipient__surname">
+                  <span class="recipient__error-message visually-hidden">Введите фамилию</span>
+                </div>
+                <div class="recipient__email-container recipient__input-container">
+                  <span class="recipient__input-placeholder">Почта</span>
+                  <input class="recipient__email">
+                  <span class="recipient__error-message visually-hidden">Укажите имя</span>
+                </div>
+                <div class="recipient__number-container recipient__input-container">
+                  <span class="recipient__input-placeholder">Телефон</span>
+                  <input class="recipient__number">
+                  <span class="recipient__error-message visually-hidden">Укажите имя</span>
+                </div>
+                <div class="recipient__id-container recipient__input-container">
+                  <span class="recipient__input-placeholder">ИНН</span>
+                  <input class="recipient__id">
+                  <span class="recipient__error-message visually-hidden">Укажите имя</span>
+                  <span class="recipient__id-description">Для таможенного оформления</span>
+                </div>
               </form>
 
             </section>
