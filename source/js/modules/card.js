@@ -8,6 +8,10 @@ import {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton} from '.
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 const cardNotAvalibleTemplate = document.querySelector('#not-avalible-card').content.querySelector('.not-avalible-card');
+
+const cardNotAvalibleTemplateMobile = document.querySelector('#mobile-not-avalible-card').content.querySelector('.mobile-not-avalible-card');
+
+
 const makerCardTemplate = document.querySelector('#maker').content.querySelector('.maker');
 
 const cardMobileTemplate = document.querySelector('#mobile-card').content.querySelector('.mobile-card');
@@ -127,6 +131,12 @@ const getDeleteNotAvalibleCard = (card) => {
   }, true);
 };
 
+const getMobileDeleteNotAvalibleCard = (card) => {
+  card.querySelector('.not-avalible-card__delete').addEventListener('click', (evt) => {
+    evt.target.closest('.mobile-not-avalible-card').remove();
+  }, true);
+};
+
 const getNotAvalibleCard = (element) => {
   const cardElement = cardNotAvalibleTemplate.cloneNode(true);
   setCardDataId(cardElement, element);
@@ -162,7 +172,7 @@ const renderNotAvalibleCards = (cards, place) => {
   place.append(fragment);
 };
 
-renderNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
+// renderNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
 // renderCards(CARDS, cardContainer);
 
 const getMobileCardProperties = (card, properties) => {
@@ -179,6 +189,9 @@ const getSpecialMobileProperti = (card, properti) => {
   if (properti) {
     const special = card.querySelector('.mobile-card__propirties-special');
     special.textContent = properti;
+  }
+  else {
+    card.querySelector('.mobile-card__propirties-special').remove();
   }
 };
 
@@ -211,6 +224,32 @@ const renderMobileCards = (cards, place) => {
   place.append(fragment);
 };
 
+const getNotAvalibleCardMobile = (element) => {
+  const cardElement = cardNotAvalibleTemplateMobile.cloneNode(true);
+  setCardDataId(cardElement, element);
+  cardElement.querySelector('.mobile-not-avalible-card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.mobile-not-avalible-card__title').textContent = element.title;
+
+  getSpecialMobileProperti(cardElement, element.specialProperti);
+  getMobileCardProperties(cardElement, element.mobilePropertis);
+
+  return cardElement;
+};
+
+const renderMobileNotAvalibleCards = (cards, place) => {
+  const fragment = document.createDocumentFragment();
+  const notAvalibleCards = getNotgetAvalibleCards(cards);
+  notAvalibleCards.forEach((card)=>{
+    const newCard = getNotAvalibleCardMobile(card);
+    getMobileDeleteNotAvalibleCard(newCard);
+    fragment.append(newCard);
+  });
+  updateAmountCard(notAvalibleCards.length);
+  place.append(fragment);
+};
+
+renderMobileNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
 renderMobileCards(CARDS, cardContainer);
+
 
 export {renderCards};

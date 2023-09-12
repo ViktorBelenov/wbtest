@@ -27,25 +27,54 @@
 
   column-gap: 24px;
   row-gap: 48px;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 
 .recipient__name-container {
   grid-column: 1/4;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+    grid-column: 1/2;
+  }
 }
 
 .recipient__surname-container {
   grid-column: 4/8;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+    grid-column: 1/2;
+  }
 }
 
 .recipient__email-container {
   grid-column: 1/3;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+    grid-column: 1/2;
+  }
 }
 .recipient__number-container {
   grid-column: 3/5;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+    grid-column: 1/2;
+  }
 }
 .recipient__id-container {
   grid-column: 5/8;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+    grid-column: 1/2;
+  }
 }
 
 .recipient__input-container {

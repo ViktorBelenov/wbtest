@@ -35,7 +35,7 @@ const CARDS = [{
   actualPrice: 10500.235,
   oldPrice: 11500.235,
   amountLeft: 1000,
-  mobilePropertis: ['Цвет: белый'],
+  mobilePropertis: ['Цвет: прозрачный'],
 },
 {
   isAvalible: true,
@@ -73,7 +73,8 @@ const CARDS = [{
   actualPrice: 522,
   oldPrice: 1051,
   amountLeft: 2,
-  mobilePropertis: [],
+  mobilePropertis: ['Цвет: белый'],
+  specialProperti: 56,
 },
 {
   isAvalible: false,
@@ -92,7 +93,7 @@ const CARDS = [{
   actualPrice: 10500.235,
   oldPrice: 11500.235,
   amountLeft: 1000,
-  mobilePropertis: [],
+  mobilePropertis: ['Цвет: прозрачный'],
 },
 {
   isAvalible: false,
@@ -112,6 +113,7 @@ const CARDS = [{
   oldPrice: 475,
   amountLeft: 2,
   mobilePropertis: [],
+  specialProperti: '56/54/52',
 }];
 
 // id

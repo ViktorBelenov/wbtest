@@ -1,0 +1,36 @@
+.mobile-not-avalible-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr min-content;
+
+  column-gap: 16px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-not-avalible-card__img-container {
+  grid-column: 1/2;
+}
+
+.mobile-not-avalible-card__text-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.mobile-not-avalible-card__button-container {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.mobile-not-avalible-card__title {
+  font-family: $ff-segoe;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-spun-pearl;
+}
+
+.mobile-not-avalible-card .mobile-card__property {
+  color: $color-spun-pearl;
+}

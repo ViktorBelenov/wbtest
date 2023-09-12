@@ -19,6 +19,12 @@
   line-height: 32px; /* 133.333% */
   letter-spacing: -0.24px;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
 }
 
 .delivery-type__setting-button {
@@ -38,6 +44,11 @@
   display: flex;
   gap: 80px;
   margin-bottom: 18px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .delivery-type__where {
@@ -78,6 +89,11 @@
   display: flex;
   gap: 33px;
   margin-bottom: 17px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .delivery-type__price-title {

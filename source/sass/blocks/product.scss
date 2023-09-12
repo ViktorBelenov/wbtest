@@ -7,6 +7,17 @@
   letter-spacing: -0.28px;
 
   margin: 15px 0 26px 0;
+
+  @media (max-width:1000px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (max-width:768px) {
+    font-size: 20px;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.2px;
+  }
 }
 
 .product__settings-container {
@@ -15,6 +26,11 @@
 
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (max-width:1000px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 
@@ -50,8 +66,18 @@
 
 .product__card-container {
   margin-bottom: 35px;
+
+  @media (max-width:1000px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .product__card-container-no-avalible {
   margin-bottom: 18px;
+
+  @media (max-width:1000px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
