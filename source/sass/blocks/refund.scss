@@ -27,3 +27,27 @@
     position: absolute;
   }
 }
+
+.refund__link:hover .refund__describe {
+  display: block;
+}
+
+.refund__describe {
+  display: none;
+  padding: 10px 16px 14px 16px;
+  width: 288px;
+  border-radius: 8px;
+  background-color: $color-default-white;
+  left: -140px;
+
+  position: absolute;
+}
+
+.refund__describe-text {
+  font-family: Segoe UI;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: $color-default-black;
+}
