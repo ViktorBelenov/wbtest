@@ -11,7 +11,16 @@
 
   grid-template-columns: 1fr 429px;
   column-gap: 32px;
+
+  @media (max-width:1130px) {
+    grid-template-columns: 1fr 303px;
+  }
+
+  @media (max-width:1000px) {
+    grid-template-columns: 1fr;
+  }
 }
+
 
 .basket__delivery {
   margin-bottom: 15px;

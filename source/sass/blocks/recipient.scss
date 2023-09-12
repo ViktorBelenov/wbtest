@@ -2,6 +2,10 @@
   padding: 16px 167px 40px 24px;
   border-radius: 16px;
   background-color: $color-default-white;
+
+  @media (max-width:(1270px)) {
+    padding: 16px 24px 40px 24px;
+  }
 }
 
 .recipient__title {

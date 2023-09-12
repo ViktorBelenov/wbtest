@@ -161,4 +161,6 @@ const renderNotAvalibleCards = (cards, place) => {
 renderNotAvalibleCards(CARDS, document.querySelector('.no-avalible__card-container'));
 renderCards(CARDS, cardContainer);
 
+const getMobileCard = () => {};
+
 export {renderCards};
