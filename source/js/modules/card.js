@@ -190,8 +190,7 @@ const getSpecialMobileProperti = (card, properti) => {
   if (properti) {
     const special = card.querySelector('.mobile-card__propirties-special');
     special.textContent = properti;
-  }
-  else {
+  } else {
     card.querySelector('.mobile-card__propirties-special').remove();
   }
 };
