@@ -268,7 +268,7 @@ const renderActualCards = () => {
     renderCards(CARDS, cardContainer);
   }
 };
-
+renderActualCards();
 window.addEventListener('resize', renderActualCards);
 
 export {renderCards};
