@@ -116,6 +116,7 @@ const getCard = (element) => {
   const cardElement = cardTemplate.cloneNode('true');
   setCardDataId(cardElement, element);
   cardElement.querySelector('.card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.card__img').srcset = `img/cards/${element.id}-product.jpg, img/cards/${element.id}-product2x.jpg 2x`;
   cardElement.querySelector('.card__title').textContent = element.title;
   cardElement.querySelector('.card__stock').textContent = element.stock;
   getCardProperties(cardElement, element.properties);
@@ -142,6 +143,7 @@ const getNotAvalibleCard = (element) => {
   const cardElement = cardNotAvalibleTemplate.cloneNode(true);
   setCardDataId(cardElement, element);
   cardElement.querySelector('.not-avalible-card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.not-avalible-card__img').srcset = `img/cards/${element.id}-product.jpg, img/cards/${element.id}-product2x.jpg 2x`;
   cardElement.querySelector('.not-avalible-card__title').textContent = element.title;
   getCardNotAvalibleProperties(cardElement, element.properties);
   return cardElement;
@@ -199,6 +201,7 @@ const getMobileCard = (element) => {
   const cardElement = cardMobileTemplate.cloneNode(true);
   setCardDataId(cardElement, element);
   cardElement.querySelector('.mobile-card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.mobile-card__img').srcset = `img/cards/${element.id}-product.jpg, img/cards/${element.id}-product2x.jpg 2x`;
   cardElement.querySelector('.mobile-card__title').textContent = element.title;
   cardElement.querySelector('.mobile-card__stock').textContent = element.stock;
   cardElement.querySelector('.counter__input').value = element.amount;
@@ -228,6 +231,7 @@ const getNotAvalibleCardMobile = (element) => {
   const cardElement = cardNotAvalibleTemplateMobile.cloneNode(true);
   setCardDataId(cardElement, element);
   cardElement.querySelector('.mobile-not-avalible-card__img').src = `img/cards/${element.id}-product.jpg`;
+  cardElement.querySelector('.mobile-not-avalible-card__img').srcset = `img/cards/${element.id}-product.jpg, img/cards/${element.id}-product2x.jpg 2x`;
   cardElement.querySelector('.mobile-not-avalible-card__title').textContent = element.title;
 
   getSpecialMobileProperti(cardElement, element.specialProperti);
