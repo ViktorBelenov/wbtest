@@ -42,7 +42,7 @@ const startsCounting = (event) => {
   currentCardData.amount = value;
   indicator.value = value;
   updatePrice(priceIndicatorContainer, currentCardData);
-  updateTotalPrice();
+  updateTotalPrice('.card');
   updateDeliveryButton();
 };
 
