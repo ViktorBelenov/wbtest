@@ -247,12 +247,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  fill: #ffffff;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 .header__link:hover {
-  opacity: 0.5;
+  fill: #cb11ab;
 }
 .header__link:focus {
   opacity: 0.5;
@@ -269,6 +270,10 @@ body {
   font-weight: 400;
   line-height: 16px;
   color: #ffffff;
+}
+
+.header__cart-link {
+  position: relative;
 }
 
 .basket {
@@ -2261,4 +2266,42 @@ body {
             align-items: center;
     position: sticky;
   }
+}
+
+.tabbar__link:hover svg {
+  fill: #cb11ab;
+}
+
+.tabbar__link svg {
+  fill: #cccccc;
+}
+
+.tabbar__cart {
+  position: relative;
+}
+
+.cart-counter {
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #f55123;
+  border-radius: 16px;
+  min-width: 16px;
+  height: 16px;
+  right: -2px;
+  top: -2px;
 }

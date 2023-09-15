@@ -11,6 +11,14 @@
   }
 }
 
-// .tabbar__link:hover svg{
-//   fill: $color-deep-magent;
-// }
+.tabbar__link:hover svg{
+  fill: $color-deep-magenta;
+}
+
+.tabbar__link svg{
+  fill: #cccccc;
+}
+
+.tabbar__cart {
+  position: relative;
+}

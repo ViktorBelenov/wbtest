@@ -5,6 +5,7 @@ import {LOW_PRODUCT_AMOUNT} from './objects.js';
 import {updatePrice} from './price-update.js';
 import {addCounter, removeCounter} from './counter.js';
 import {setSelectedCardListiner, updateTotalPrice, updateDeliveryButton} from './total.js';
+import {updateAmountCardCart} from './amount-card-in-cart.js';
 
 const cardTemplate = document.querySelector('#card').content.querySelector('.card');
 const cardNotAvalibleTemplate = document.querySelector('#not-avalible-card').content.querySelector('.not-avalible-card');
@@ -23,6 +24,8 @@ const cardContainer = document.querySelector('.product__card-container');
 const notAlalibleCardContainer = document.querySelector('.no-avalible__card-container');
 
 const choseAllButton = document.querySelector('.check-all-card');
+const headerCart = document.querySelector('.header__cart-link');
+const tabbarCart = document.querySelector('.tabbar__cart');
 
 const getAvalibleCards = (cards) => {
   const avalible = cards.filter((element) => element.isAvalible);
@@ -85,6 +88,7 @@ const getDeleteCard = (card) => {
     evt.target.closest('.card').remove();
     updateTotalPrice('.card');
     updateDeliveryButton();
+    updateAmountCardCart(headerCart);
   }, true);
 };
 
@@ -270,7 +274,10 @@ const renderActualCards = () => {
     renderNotAvalibleCards(CARDS, notAlalibleCardContainer);
     renderCards(CARDS, cardContainer);
   }
+  updateAmountCardCart(headerCart);
+  updateAmountCardCart(tabbarCart);
 };
+
 renderActualCards();
 window.addEventListener('resize', renderActualCards);
 

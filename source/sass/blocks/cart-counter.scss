@@ -1,0 +1,24 @@
+.cart-counter {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $ff-segoe;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+
+  color: $color-default-white;
+
+  background-color: $color-outrageous-orange;
+
+  border-radius: 16px;
+
+  min-width: 16px;
+  height: 16px;
+
+  right: -2px;
+  top: -2px;
+}
